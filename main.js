@@ -89,7 +89,7 @@ const translations = {
         coding_desc: "As students selected by the CTO of Saint-Joseph, we create and maintain an alumni portal, and develop various new software for the school.",
         innovation_desc: "Admitted to the team after winning a project hackathon with 25 participating teams, we create projects and apply to EU funds for future development, as well as possible Erasmus+ programs.",
         yillik_desc: "We developed an online platform where Saint-Joseph High School 2025 graduates can write yearbook notes to each other. Once collected the notes were also edited by us.",
-        frc_desc: "Being a mentor for #10043 Conscius Robotics, while primarily working on public relations and social media, I helped out in a variety of the work done, including the assembly of the robot itself. As the official FRC team of Saint-Joseph High School, we won our first season, we won the Finalist Award at Marmara Regional 2025.",
+        frc_desc: "Being a mentor for #10043 Conscius Robotics, while primarily working on public relations and social media, I helped out in a variety of the work done, including the assembly of the robot itself. As the official FRC team of Saint-Joseph High School, we won the Finalist Award at Marmara Regional 2025, our first ever season.",
         social_media: "Social Media Manager",
         social: "Social Media",
         pr: "Public Relations",
