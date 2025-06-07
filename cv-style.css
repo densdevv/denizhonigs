@@ -781,7 +781,8 @@ h3 {
 }
 
 .certificate-pending {
-    pointer-events: all;
+    pointer-events: none;
+    cursor: not-allowed;
     color: #757DA1;
     text-decoration: none;
 }

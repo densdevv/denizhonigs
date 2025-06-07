@@ -127,6 +127,9 @@ const translations = {
         fun: "Fun",
         dens_desc: "dens.dev is a collection of little websites that I created just for fun. You can check them out by clicking the link below.",
         term1_disclaimer: "*Ranking according to 1st term grades",
+        second_place: "Salutatorian (#2) of Class of 2025",
+        gpa: "GPA",
+        gpa_desc: "Average of 9th-12th Grades",
     },
     "tr": {
         greeting: "👋 Merhaba!",
@@ -255,6 +258,9 @@ const translations = {
         fun: "Eğlence",
         dens_desc: "dens.dev, eğlencesine oluşturduğum küçük web sitelerinin bir koleksiyonudur. Göz atmak için aşağıdaki bağlantıya tıklayabilirsiniz.",
         term1_disclaimer: "*Sıralama 1. dönem notlarına göredir",
+        second_place: "2025 Mezunları Okul İkincisi",
+        gpa: "Diploma Notu",
+        gpa_desc: "9-12. Sınıf Ortalaması",
     },
     "fr": {
         greeting: "👋 Bonjour!",
@@ -321,7 +327,7 @@ const translations = {
         c2: "C2 Expertise",
         learning: "En train d'apprendre",
         beginner: "Niveau débutant",
-        honor_certificate: "Certificat d'honneur",
+        honor_certificate: "Prix d'honneur",
         experience: "🏢 Expérience",
         extracurriculars: "💡 Activités périscolaires",
         intern: "Stage",
@@ -383,6 +389,9 @@ const translations = {
         fun: "Fun",
         dens_desc: "dens.dev est une collection de petits sites web que j'ai créés juste pour s'amuser. Vous pouvez les consulter en cliquant sur le lien ci-dessous.",
         term1_disclaimer: "*Classement selon les notes du 1er semestre",
+        second_place: "Deuxième de la promotion 2025",
+        gpa: "Moy. générale",
+        gpa_desc: "Moyenne de 9ème à 12ème",
     }
 };
 
