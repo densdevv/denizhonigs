@@ -104,7 +104,7 @@ const translations = {
         current: "Since",
         socials: "Socials",
         education: "🎓 Education and Certifications",
-        primary_school: "Primary - Middle School",
+        primary_school: "Primary & Middle School",
         high_school: "High School",
         bilfen: "Bilfen College Çamlıca",
         saint_joseph: "Istanbul Saint-Joseph French High School",
@@ -130,6 +130,7 @@ const translations = {
         second_place: "Salutatorian (#2) of Class of 2025",
         gpa: "GPA",
         gpa_desc: "Average of 9th-12th Grades",
+        cloud: "Cloud Technology",
     },
     "tr": {
         greeting: "👋 Merhaba!",
@@ -235,7 +236,7 @@ const translations = {
         current: "Başlangıç:",
         socials: "Sosyal Medya",
         education: "🎓 Eğitim ve Sertifikalar",
-        primary_school: "İlkokul - Ortaokul",
+        primary_school: "İlkokul & Ortaokul",
         high_school: "Lise",
         bilfen: "Bilfen Koleji Çamlıca",
         saint_joseph: "İstanbul Saint-Joseph Fransız Lisesi",
@@ -261,6 +262,7 @@ const translations = {
         second_place: "2025 Mezunları Okul İkincisi",
         gpa: "Diploma Notu",
         gpa_desc: "9-12. Sınıf Ortalaması",
+        cloud: "Bulut Teknolojisi",
     },
     "fr": {
         greeting: "👋 Bonjour!",
@@ -366,7 +368,7 @@ const translations = {
         current: "depuis",
         socials: "Réseaux sociaux",
         education: "🎓 Éducation et certifications",
-        primary_school: "École primaire - secondaire",
+        primary_school: "École primaire & collège",
         high_school: "Lycée",
         bilfen: "Collège Bilfen Çamlıca",
         saint_joseph: "Lycée Français Saint-Joseph d'Istanbul",
@@ -392,6 +394,7 @@ const translations = {
         second_place: "Deuxième de la promotion 2025",
         gpa: "Moy. générale",
         gpa_desc: "Moyenne de 9ème à 12ème",
+        cloud: "Technologie Cloud",
     }
 };
 
