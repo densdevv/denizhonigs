@@ -418,6 +418,7 @@ h3 {
 .experience-card-primary,
 .student-card-primary {
     padding-left: 8px;
+    padding-top: 4px;
     border-radius: 4px;
     display: flex;
     flex-direction: row;
@@ -441,7 +442,7 @@ h3 {
 .student-card-primary {
     background-color: var(--secondary-blue);
     border-left: 4px solid var(--primary-blue);
-    height: 64px;
+    min-height: 64px;
 }
 
 .experience-card-primary img,
@@ -908,31 +909,22 @@ h3 {
         text-align: center;
     }
 
-    #greeting h2 {
-        margin-top: 12px;
+    #greeting h1 {
+        font-size: 36px;
     }
 
-    #greeting h1,
     #greeting h2 {
-        margin-right: 10px;
+        margin-top: 12px;
     }
 
     .footer {
         margin: 32px -2px -24px -8px;
     }
 
-    .info {
-        flex-direction: column;
-    }
-
-    .info-text {
-        width: calc(100% - 24px);
-    }
-
     .info-links-container {
-        width: calc(100%);
-        margin-left: 0;
         flex-direction: row;
+        justify-content: center;
+        width: calc(100vw - 24px);
     }
 
     .experience-info h3,
