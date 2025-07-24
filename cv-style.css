@@ -1,18 +1,10 @@
 /*#region General*/
 :root {
-    --primary-blue: #3b5ae4;
-    --secondary-blue: #cbd3ff;
-    --tertiary-blue: #f3f5ff;
-    --primary-yellow: #9e8b1c;
-    --secondary-yellow: #fff9d9;
-    --tertiary-yellow: #fffdf2;
-    --primary-red: #be3030;
-    --secondary-red: #fce9e9;
-    --tertiary-red: #fff3f3;
-    --primary-purple: #6f3ff5;
-    --secondary-purple: #e6e3ff;
-    --tertiary-purple: #f7f6ff;
+    --primary-blue: #1e88e5;
+    --secondary-blue: #e3f2fd;
+    --tertiary-blue: rgba(234, 243, 250, 0.5);
     --secondary-text: #545660;
+    --border-color: #eaeaea;
     --background: #ffffff;
     --standard-box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
 }
@@ -130,7 +122,7 @@ h3 {
     top: 150%;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: var(--standard-box-shadow);
+    border: 1px solid var(--border-color);
     border: 1px dotted var(--secondary-blue);
     opacity: 1 !important;
 }
@@ -174,56 +166,25 @@ h3 {
 
 /*#region Info*/
 
-.info {
-    background-color: #fff;
-    box-shadow: var(--standard-box-shadow);
-    border-radius: 4px;
-    padding: 4px;
-    border-left: 4px solid var(--primary-blue);
-    margin: 0 8px 24px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.info-text {
-    width: calc(100% - 190px);
-    padding: 4px;
-    text-align: justify;
-    font-size: 14px;
-    user-select: text;
-}
-
 .info-links-container {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-left: 8px;
-    width: 160px;
+    flex-direction: row;
+    margin-top: 10px;
+    width: 220px;
 }
 
 .info-link {
     margin: 4px;
     color: var(--primary-blue);
-    background-color: var(--tertiary-blue);
+    background-color: white;
+    border: 1px solid var(--border-color);
     font-weight: 600;
     cursor: pointer;
     text-decoration: none;
     padding: 4px;
     border-radius: 4px;
-    width: 100%;
+    width: 1990px;
     text-align: center;
-}
-
-.disclaimer {
-    background-color: rgb(252, 233, 233);
-    box-shadow: var(--standard-box-shadow);
-    border-radius: 4px;
-    padding: 8px;
-    border-left: 4px solid rgb(190, 48, 48);
-    margin-right: 8px;
-    margin-bottom: 12px;
-
 }
 
 #greeting {
@@ -232,14 +193,32 @@ h3 {
     margin: 0 !important;
 }
 
-#greeting h1,
-#greeting h2 {
+#greeting h1 {
+    font-size: 48px;
+    font-weight: 600;
     margin: 0;
     padding: 0;
+    animation: fade-in 1s ease forwards;
+    animation-delay: calc(var(--animation-delay) * var(--index));
+}
+
+#greeting h2 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
 }
 
 #greeting h1 span {
     color: var(--primary-blue);
+}
+
+#greeting h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: var(--secondary-text);
+    font-weight: 400;
 }
 
 #greeting-lang {
@@ -262,7 +241,7 @@ h3 {
 .lang-card {
     background-color: #fff;
     border-radius: 4px;
-    box-shadow: var(--standard-box-shadow);
+    border: 1px solid var(--border-color);
     padding: 8px;
     width: 300px !important;
     height: 64px;
@@ -315,12 +294,13 @@ h3 {
 .course-card {
     background-color: #fff;
     border-radius: 4px;
-    box-shadow: var(--standard-box-shadow);
+    border: 1px solid var(--border-color);
     padding: 8px;
     flex-grow: 1;
     margin: 0 8px 8px 0;
     display: flex;
     flex-direction: column;
+    height: fit-content;
 }
 
 .school-card {
@@ -342,24 +322,13 @@ h3 {
     min-height: 60px;
     max-height: 160px;
     padding: 8px 0 0 8px;
+    background-color: var(--secondary-blue);
+    border-left: 4px solid var(--primary-blue);
 }
 
-.school-card-primary {
-    background-color: var(--secondary-yellow);
-    border-left: 4px solid var(--primary-yellow);
-}
-
-.course-card-primary {
-    background-color: var(--secondary-purple);
-    border-left: 4px solid var(--primary-purple);
-}
-
-.school-card-primary h3 {
-    color: var(--primary-yellow);
-}
-
+.school-card-primary h3,
 .course-card-primary h3 {
-    color: var(--primary-purple);
+    color: var(--primary-blue);
 }
 
 .school-card-primary img,
@@ -411,11 +380,12 @@ h3 {
 .student-card {
     background-color: #fff;
     border-radius: 4px;
-    box-shadow: var(--standard-box-shadow);
+    border: 1px solid var(--border-color);
     padding: 8px;
     margin-bottom: 16px;
     margin: 0 8px 8px 0;
     flex-grow: 1;
+    height: fit-content;
 }
 
 .internship-card,
@@ -455,14 +425,14 @@ h3 {
 }
 
 .internship-card-primary {
-    background-color: var(--secondary-yellow);
-    border-left: 4px solid var(--primary-yellow);
+    background-color: var(--secondary-blue);
+    border-left: 4px solid var(--primary-blue);
     height: 64px;
 }
 
 .experience-card-primary {
-    background-color: var(--secondary-purple);
-    border-left: 4px solid var(--primary-purple);
+    background-color: var(--secondary-blue);
+    border-left: 4px solid var(--primary-blue);
     min-height: 60px;
     max-height: 160px;
     padding: 8px;
@@ -489,18 +459,6 @@ h3 {
     height: calc(100% - 12px);
 }
 
-.experience-info {
-    border-left: 2px solid var(--primary-purple);
-}
-
-.internship-info {
-    border-left: 2px solid var(--primary-yellow);
-}
-
-.student-info {
-    border-left: 2px solid var(--primary-blue);
-}
-
 .experience-info h3,
 .internship-info h3,
 .student-info h3 {
@@ -510,12 +468,12 @@ h3 {
 }
 
 .experience-info h3 {
-    color: var(--primary-purple);
+    color: var(--primary-blue);
     margin-top: 4px;
 }
 
 .internship-info h3 {
-    color: var(--primary-yellow);
+    color: var(--primary-blue);
 }
 
 .student-info h3 {
@@ -532,48 +490,6 @@ h3 {
     color: var(--secondary-text);
 }
 
-.experience-tags-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 4px -4px -4px -4px;
-}
-
-.experience-tag,
-.internship-tag,
-.student-tag {
-    padding: 4px 8px;
-    font-size: 14px;
-    width: fit-content;
-    text-align: center;
-    border-radius: 4px;
-    margin: 4px;
-}
-
-.experience-tag {
-    background-color: var(--tertiary-purple);
-    border: 1px dashed var(--primary-purple);
-    color: var(--primary-purple);
-}
-
-.internship-tag {
-    background-color: var(--tertiary-yellow);
-    border: 1px dashed var(--primary-yellow);
-    color: var(--primary-yellow);
-}
-
-.student-tag {
-    background-color: var(--tertiary-blue);
-    border: 1px dashed var(--primary-blue);
-    color: var(--primary-blue);
-}
-
-.experience-tag i,
-.internship-tag i,
-.student-tag i {
-    margin-right: 6px;
-}
-
 .experience-desc,
 .internship-desc,
 .student-desc {
@@ -588,11 +504,11 @@ h3 {
 }
 
 .experience-desc {
-    background-color: var(--tertiary-purple);
+    background-color: var(--tertiary-blue);
 }
 
 .internship-desc {
-    background-color: var(--tertiary-yellow);
+    background-color: var(--tertiary-blue);
 }
 
 .student-desc {
@@ -639,12 +555,14 @@ h3 {
 .test-card {
     background-color: #fff;
     border-radius: 4px;
-    box-shadow: var(--standard-box-shadow);
+    border: 1px solid var(--border-color);
     padding: 8px;
     margin-bottom: 16px;
     width: 360px !important;
     margin: 0 8px 8px 0;
     flex-grow: 1;
+    height: fit-content;
+
 }
 
 .test-card-filler {
@@ -735,7 +653,7 @@ h3 {
 }
 
 .placement-second {
-    background-color: silver;
+    background-color: #C0C0C0;
 }
 
 .placement-third {
@@ -803,7 +721,7 @@ h3 {
 .competition-card {
     background-color: #fff;
     border-radius: 4px;
-    box-shadow: var(--standard-box-shadow);
+    border: 1px solid var(--border-color);
     padding: 8px;
     margin-bottom: 16px;
     width: 480px !important;
@@ -820,8 +738,8 @@ h3 {
 }
 
 .competition-card-primary {
-    background-color: var(--secondary-red);
-    border-left: 4px solid var(--primary-red);
+    background-color: var(--secondary-blue);
+    border-left: 4px solid var(--primary-blue);
     padding-left: 8px;
     border-radius: 4px;
     display: flex;
@@ -834,7 +752,7 @@ h3 {
     margin: 0;
     padding-top: 8px;
     font-size: 24px;
-    color: var(--primary-red);
+    color: var(--primary-blue);
 }
 
 .competition-info p {
@@ -864,7 +782,7 @@ h3 {
     padding: 4px 8px;
     font-size: 14px;
     color: var(--secondary-text);
-    background-color: var(--tertiary-red);
+    background-color: var(--tertiary-blue);
     border-radius: 4px;
     display: flex;
     flex-direction: row;
@@ -877,7 +795,7 @@ h3 {
 }
 
 .competition-year {
-    background-color: var(--secondary-red) !important;
+    background-color: var(--secondary-blue) !important;
     margin-left: 0 !important;
     font-weight: 600;
     max-width: 50px !important;
@@ -893,6 +811,7 @@ h3 {
     align-self: center;
     cursor: pointer;
     color: var(--primary-blue);
+    text-decoration: none;
 }
 
 .view-competition-certificate img {
@@ -918,7 +837,7 @@ h3 {
     border-radius: 4px;
     background-color: #fff;
     box-sizing: border-box;
-    box-shadow: var(--standard-box-shadow);
+    border: 1px solid var(--border-color);
     padding-right: 4px;
     width: 360px;
     font-size: 14px;
