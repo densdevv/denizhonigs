@@ -130,6 +130,7 @@ const translations = {
         gpa: "GPA",
         gpa_desc: "Average of 9th-12th Grades",
         cloud: "Cloud Technology",
+        cms: "CMS - Special Mathematics Course",
     },
     "tr": {
         greeting: "👋 Merhaba!",
@@ -261,6 +262,7 @@ const translations = {
         gpa: "Diploma Notu",
         gpa_desc: "9-12. Sınıf Ortalaması",
         cloud: "Bulut Teknolojisi",
+        cms: "CMS - Hazırlık Sınıfı",
     },
     "fr": {
         greeting: "👋 Bonjour!",
@@ -392,6 +394,7 @@ const translations = {
         gpa: "Moy. générale",
         gpa_desc: "Moyenne de 9ème à 12ème",
         cloud: "Technologie Cloud",
+        cms: "CMS - Cours de Mathématiques Spéciales",
     }
 };
 
