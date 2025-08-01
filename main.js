@@ -3,7 +3,7 @@ const translations = {
     "en": {
         greeting: "👋 Hey there!",
         name: "I'm <span>Deniz Hönigs</span>",
-        name_title: "Saint-Joseph '25, Developer, Tech Enthusiast",
+        name_title: "Incoming CMS student @EPFL, Saint-Joseph '25, Developer, Tech Enthusiast",
         grades: "📑 School Grades",
         first_term: "First Term",
         second_term: "Second Term",
@@ -132,12 +132,12 @@ const translations = {
         cloud: "Cloud Technology",
         cms: "CMS (Preparatory Year)",
         sj_desc: "Saint-Joseph is a prestigious French high school in Istanbul, Turkey, known for its academic excellence and rich history. <br> • #2 of Class of 2025 <br> • 4x Honor Award (2022, 2023, 2024, 2025) <br> • Metaclass Education System Project",
-        cms_desc: "EPFL (École Polytechnique Fédérale de Lausanne) is among the top 25 universities globally, known for its cutting-edge research and innovation in technology and engineering. <br> • I have been accepted to the CMS (Special Mathematics Course) program, a preparatory course for future students. <br> • I plan to continue my studies here, pursuing a degree in Computer Science.   ",
+        cms_desc: "EPFL is among the top 25 universities globally, known for its cutting-edge research and innovation in technology and engineering. <br> • I have been accepted to the CMS preparatory year, and plan to continue my studies here, pursuing a degree in Computer Science.",
     },
     "tr": {
         greeting: "👋 Merhaba!",
         name: "Ben, <span>Deniz Hönigs</span>",
-        name_title: "Saint-Joseph '25, Geliştirici, Teknoloji Meraklısı",
+        name_title: "Gelecek EPFL CMS öğrencisi, Saint-Joseph '25, Geliştirici, Teknoloji Meraklısı",
         grades: "📑 Okul Notları",
         first_term: "Birinci Dönem",
         second_term: "İkinci Dönem",
@@ -266,12 +266,11 @@ const translations = {
         cloud: "Bulut Teknolojisi",
         cms: "CMS (Hazırlık Sınıfı)",
         sj_desc: "İstanbul Saint-Joseph, Türkiye'de bulunan prestijli bir Fransız lisesidir. Akademik mükemmeliyeti ve zengin tarihi ile tanınır. <br> • 2025 Mezunları Okul İkincisi <br> • 4x Onur Ödülü (2022, 2023, 2024, 2025) <br> • Metaclass Eğitim Sistemi Projesi",
-        cms_desc: "EPFL (École Polytechnique Fédérale de Lausanne), dünya çapında ilk 25 üniversiteden biridir ve teknoloji ve mühendislik alanlarında öncü araştırma ve yenilikleri ile tanınır. <br> • Gelecek öğrenciler için hazırlık kursu olan CMS (Özel Matematik Kursu) programına kabul edildim. <br> • Burada eğitimime devam etmeyi planlıyorum, Bilgisayar Bilimleri alanında bir derece kazanmayı hedefliyorum.",
-    },
+        cms_desc: "EPFL, teknoloji ve mühendislik alanında öncü olan, dünya çapında en iyi 25 üniversiteden biridir. <br> • CMS hazırlık sınıfına kabul edildim ve burada bilgisayar mühendisliği okumayı planlıyorum.",},
     "fr": {
         greeting: "👋 Bonjour!",
         name: "Je suis <span>Deniz Hönigs</span>",
-        name_title: "Saint-Joseph '25, Développeur, Passionné de Technologie",
+        name_title: "Futur étudiant CMS à l'EPFL, Saint-Joseph '25, Développeur, Passionné de technologie",
         grades: "📑 Notes d'école",
         first_term: "Premier Semestre",
         second_term: "Deuxième Semestre",
@@ -400,8 +399,7 @@ const translations = {
         cloud: "Technologie Cloud",
         cms: "CMS (Année préparatoire)",
         sj_desc: "Saint-Joseph est un prestigieux lycée français à Istanbul, en Turquie, connu pour son excellence académique et sa riche histoire. <br> • #2 de la promotion 2025 <br> • 4x Prix d'honneur (2022, 2023, 2024, 2025) <br> • Projet du système éducatif Metaclass",
-        cms_desc: "EPFL (École Polytechnique Fédérale de Lausanne) est l'une des 25 meilleures universités au monde, reconnue pour sa recherche de pointe et son innovation dans les domaines de la technologie et de l'ingénierie. <br> • J'ai été accepté dans le programme CMS (Cours de Mathématiques Spéciales), un cours préparatoire pour les futurs étudiants. <br> • Je prévois de poursuivre mes études ici, en visant un diplôme en informatique.",
-    }
+        cms_desc: "L'EPFL est l'une des 25 meilleures universités au monde, reconnue pour sa recherche de pointe et son innovation dans les domaines de la technologie et de l'ingénierie. <br> • J'ai été accepté à l'année préparatoire CMS, et je prévois de poursuivre mes études ici, en visant un diplôme en informatique.",}
 };
 
 function updateContent(language) {

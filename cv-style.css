@@ -917,6 +917,12 @@ h3 {
         margin-top: 12px;
     }
 
+    #greeting h3 {
+        font-size: 18px;
+        width: 80%;
+        margin-left: 10%;
+    }
+
     .footer {
         margin: 32px -2px -24px -8px;
     }
