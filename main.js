@@ -3,7 +3,7 @@ const translations = {
     "en": {
         greeting: "👋 Hey there!",
         name: "I'm <span>Deniz Hönigs</span>",
-        name_title: "Incoming CMS student @EPFL, Saint-Joseph '25, Developer, Tech Enthusiast",
+        name_title: "CMS student @EPFL, Saint-Joseph '25, Developer",
         grades: "📑 School Grades",
         first_term: "First Term",
         second_term: "Second Term",
@@ -137,7 +137,7 @@ const translations = {
     "tr": {
         greeting: "👋 Merhaba!",
         name: "Ben, <span>Deniz Hönigs</span>",
-        name_title: "Gelecek EPFL CMS öğrencisi, Saint-Joseph '25, Geliştirici, Teknoloji Meraklısı",
+        name_title: "EPFL'de CMS öğrencisi, Saint-Joseph '25, Geliştirici",
         grades: "📑 Okul Notları",
         first_term: "Birinci Dönem",
         second_term: "İkinci Dönem",
@@ -270,7 +270,7 @@ const translations = {
     "fr": {
         greeting: "👋 Bonjour!",
         name: "Je suis <span>Deniz Hönigs</span>",
-        name_title: "Futur étudiant CMS à l'EPFL, Saint-Joseph '25, Développeur, Passionné de technologie",
+        name_title: "Étudiant CMS à l'EPFL, Saint-Joseph '25, Développeur",
         grades: "📑 Notes d'école",
         first_term: "Premier Semestre",
         second_term: "Deuxième Semestre",
