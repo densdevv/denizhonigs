@@ -83,7 +83,7 @@ const translations = {
         koda_desc: "Kod-A Bilisim has been developing document-based technologies and providing solutions since 2006. Working as an intern, I had the opportunity to familiarize myself with various data management systems and software development processes.",
         fibabanka_desc: "As one of the leading banks in terms of digital banking services, working here gave me a general understanding of the fintech industry, and the limitless possibilities of technology's implementations in different sectors.",
         fmss_desc: "FMSS Bilişim Teknolojileri is a software company that provides outsourcing services in the fields of e-commerce and app development, as well as developing in-house projects. I had the chance to learn about the software development processes in a professional environment.",
-        gunce_desc: "İstanbul Günceleri is a student newspaper initiative that aims to provide a platform for students. I redesigned all social media content, and continue to manage the social media accounts, actively posts and Reels.",
+        gunce_desc: "İstanbul Günceleri is a student newspaper initiative that aims to provide a platform for students. I redesigned all social media content, and managed the accounts for over two years.",
         mfinue_desc: "For the fourteenth edition of the Francophone Model United Nations of Eurasia, I participated as an IT team member, contributing to the technical infrastructure of the conference including the website and MFINUE Connect portal.",
         coding_desc: "As students selected by the CTO of Saint-Joseph, we create and maintain an alumni portal, and develop various new software for the school.",
         innovation_desc: "Admitted to the team after winning a project hackathon with 25 participating teams, we create projects and apply to EU funds for future development, as well as possible Erasmus+ programs.",
@@ -132,7 +132,7 @@ const translations = {
         cloud: "Cloud Technology",
         cms: "CMS (Preparatory Year)",
         sj_desc: "Saint-Joseph is a prestigious French high school in Istanbul, Turkey, known for its academic excellence and rich history. <br> • #2 of Class of 2025 <br> • 4x Honor Award (2022, 2023, 2024, 2025) <br> • Metaclass Education System Project",
-        cms_desc: "EPFL is among the top 25 universities globally, known for its cutting-edge research and innovation in technology and engineering. <br> • I have been accepted to the CMS preparatory year, and plan to continue my studies here, pursuing a degree in Computer Science.",
+        cms_desc: "EPFL is among the top 25 universities globally, known for its cutting-edge research and innovation in technology and engineering. <br> • I am currently studying in the CMS preparatory year, and plan to continue my studies here, pursuing a Bachelor's degree in Computer Science.",
     },
     "tr": {
         greeting: "👋 Merhaba!",
@@ -217,7 +217,7 @@ const translations = {
         koda_desc: "Kod-A Bilişim, 2006 yılından beri belge tabanlı teknoloji çözümleri sunmaktadır. Stajyer olarak çalışırken çeşitli veri yönetim sistemleri ve yazılım geliştirme süreçlerini tanıma fırsatı buldum.",
         fibabanka_desc: "Dijital bankacılık hizmetleri açısından önde gelen bankalardan biri olan Fibabanka'da çalışmak, fintech sektörü hakkında genel bir anlayış kazanmama ve teknolojinin farklı sektörlerdeki uygulamalarının sınırsız olasılıklarını görmeme olanak tanıdı.",
         fmss_desc: "FMSS Bilişim Teknolojileri, e-ticaret ve uygulama geliştirme alanlarında dış kaynak hizmetleri sunan ve aynı zamanda kendi projelerini geliştiren bir yazılım şirketidir. Burada, profesyonel bir ortamda yazılım geliştirme süreçlerini öğrenme şansı buldum.",
-        gunce_desc: "İstanbul Günceleri, öğrencilere buluşma noktası sağlamayı amaçlayan bir öğrenci gazetesidir. Tüm sosyal medya içeriklerini yeniden tasarladım ve sosyal medya hesaplarını yönetmeye devam ediyorum, aktif olarak gönderi ve Reels paylaşıyorum.",
+        gunce_desc: "İstanbul Günceleri, öğrencilere bir platform sağlamayı amaçlayan bir öğrenci gazetesi girişimidir. Tüm sosyal medya içeriklerini yeniden tasarladım ve iki yıldan fazla bir süre boyunca hesapları yönettim.",
         mfinue_desc: "Avrasya Frankofon Model Birleşmiş Milletler'in on dördüncü edisyonu için IT ekibinde yer alarak, konferansın teknik altyapısına, web sitesi ve MFINUE Connect portalı dahil olmak üzere katkıda bulundum.",
         coding_desc: "Saint-Joseph'in CTO'su tarafından seçilen öğrenciler olarak bir mezunlar portalı oluşturuyor ve sürdürüyor, okul için çeşitli yeni yazılımlar geliştiriyoruz.",
         innovation_desc: "25 takımın katıldığı bir proje hackathon'unda başarılı olarak takıma kabul edildik. Bu takımda projeler oluşturup AB fonlarına, ayrıca olası Erasmus+ programlarına başvuruyoruz.",
@@ -266,7 +266,7 @@ const translations = {
         cloud: "Bulut Teknolojisi",
         cms: "CMS (Hazırlık Sınıfı)",
         sj_desc: "İstanbul Saint-Joseph, Türkiye'de bulunan prestijli bir Fransız lisesidir. Akademik mükemmeliyeti ve zengin tarihi ile tanınır. <br> • 2025 Mezunları Okul İkincisi <br> • 4x Onur Ödülü (2022, 2023, 2024, 2025) <br> • Metaclass Eğitim Sistemi Projesi",
-        cms_desc: "EPFL, teknoloji ve mühendislik alanında öncü olan, dünya çapında en iyi 25 üniversiteden biridir. <br> • CMS hazırlık sınıfına kabul edildim ve burada bilgisayar mühendisliği okumayı planlıyorum.",},
+        cms_desc: "EPFL, teknoloji ve mühendislik alanında öncü olan, dünya çapında en iyi 25 üniversiteden biridir. <br> • Şu anda CMS hazırlık sınıfında okuyorum ve burada Bilgisayar Mühendisliği lisans programı okumayı planlıyorum.",},
     "fr": {
         greeting: "👋 Bonjour!",
         name: "Je suis <span>Deniz Hönigs</span>",
@@ -350,7 +350,7 @@ const translations = {
         koda_desc: "Kod-A Bilisim développe des technologies basées sur des documents et fournit des solutions depuis 2006. En tant que stagiaire, j'ai eu l'occasion de me familiariser avec divers systèmes de gestion de données et processus de développement de logiciels.",
         fibabanka_desc: "En tant que l'une des principales banques en termes de services bancaires numériques, travailler ici m'a donné une compréhension générale de l'industrie fintech et des possibilités illimitées des implémentations technologiques dans différents secteurs.",
         fmss_desc: "FMSS Bilişim Teknolojileri est une entreprise de logiciels qui fournit des services d'externalisation dans les domaines du commerce électronique et du développement d'application, ainsi que le développement de projets internes. J'ai eu la chance d'apprendre les processus de développement de logiciels dans un environnement professionnel.",
-        gunce_desc: "İstanbul Günceleri est une initiative de journal étudiant qui vise à fournir une plateforme aux étudiants. J'ai re-conçu tout le contenu des réseaux sociaux et continue de gérer les comptes de médias sociaux, de publier activement des posts et des Reels.",
+        gunce_desc: "İstanbul Günceleri est une initiative de journal étudiant qui vise à fournir une plateforme aux étudiants. J'ai re-conçu tout le contenu des réseaux sociaux et a géré les comptes pendant plus de deux ans.",
         mfinue_desc: "Pour la quatorzième édition du Modèle Francophone des Nations Unies en Eurasie, j'ai participé en tant que membre de l'équipe de TI, contribuant à l'infrastructure technique de la conférence, y compris le site web et le portail MFINUE Connect.",
         coding_desc: "En tant qu'étudiants sélectionnés par le CTO de Saint-Joseph, nous créons un portail des anciens élèves, et développons divers nouveaux logiciels pour l'école.",
         innovation_desc: "Admis dans l'équipe après avoir remporté un hackathon de projet avec 25 équipes participantes, nous créons des projets et postulons aux fonds de l'UE pour un développement futur, ainsi qu'à des programmes Erasmus+ possibles.",
@@ -399,7 +399,7 @@ const translations = {
         cloud: "Technologie Cloud",
         cms: "CMS (Année préparatoire)",
         sj_desc: "Saint-Joseph est un prestigieux lycée français à Istanbul, en Turquie, connu pour son excellence académique et sa riche histoire. <br> • #2 de la promotion 2025 <br> • 4x Prix d'honneur (2022, 2023, 2024, 2025) <br> • Projet du système éducatif Metaclass",
-        cms_desc: "L'EPFL est l'une des 25 meilleures universités au monde, reconnue pour sa recherche de pointe et son innovation dans les domaines de la technologie et de l'ingénierie. <br> • J'ai été accepté à l'année préparatoire CMS, et je prévois de poursuivre mes études ici, en visant un diplôme en informatique.",}
+        cms_desc: "L'EPFL est l'une des 25 meilleures universités au monde, reconnue pour sa recherche de pointe et son innovation dans les domaines de la technologie et de l'ingénierie. <br> • J'étudie actuellement dans la classe préparatoire CMS, et je prévois de poursuivre mes études ici, en visant un Bachelor en informatique.",}
 };
 
 function updateContent(language) {
