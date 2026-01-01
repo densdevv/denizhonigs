@@ -37,6 +37,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     margin: 24px;
+    margin-bottom: 0;
     overflow-y: scroll;
     user-select: none;
 }
@@ -820,7 +821,69 @@ h3 {
     margin-right: 4px;
 }
 
-/*#endregion Competitions*/
+/*#region Warning Banner*/
+.warning-banner {
+    background-color: #fae1e1;
+    border: 1px solid #a94442;
+    color: #a94442;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    width: calc(100% - 32px);
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.warning-banner i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Modal styles */
+.banner-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.banner-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*#endregion Warning Banner*/
 
 .footer {
     text-align: center;

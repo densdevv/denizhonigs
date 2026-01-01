@@ -133,6 +133,9 @@ const translations = {
         cms: "CMS (Preparatory Year)",
         sj_desc: "Saint-Joseph is a prestigious French high school in Istanbul, Turkey, known for its academic excellence and rich history. <br> • #2 of Class of 2025 <br> • 4x Honor Award (2022, 2023, 2024, 2025) <br> • Metaclass Education System Project",
         cms_desc: "EPFL is among the top 25 universities globally, known for its cutting-edge research and innovation in technology and engineering. <br> • I am currently studying in the CMS preparatory year, and plan to continue my studies here, pursuing a Bachelor's degree in Computer Science.",
+        banner_title: "Important Security Notice",
+        popup_title: "Important Security Notice",
+        popup_text: "On December 31, 2025, denizhonigs.com experienced a security breach in which unauthorized users gained temporary access to the site's hosting configuration. These users were successfully removed and access was fully secured as of January 1, 2026. <b>The website has now been restored to its original state.</b> <br><br> While we believe the impact was limited, if you visited denizhonigs.com between December 31, 2025 (14:00 GMT) and January 1, 2026 (14:00 GMT), <b>any information shared or transactions attempted during this window may have been directed to a malicious third party.</b> Out of an abundance of caution, we recommend monitoring your accounts. Please consider changing your passwords if you entered any credentials, and contact your financial institution if you attempted to make a purchase. <br><br> If you did not visit the website during this specific timeframe, no action is required and the site is safe to use. <br><br> Thank you for your patience and understanding."
     },
     "tr": {
         greeting: "👋 Merhaba!",
@@ -266,7 +269,11 @@ const translations = {
         cloud: "Bulut Teknolojisi",
         cms: "CMS (Hazırlık Sınıfı)",
         sj_desc: "İstanbul Saint-Joseph, Türkiye'de bulunan prestijli bir Fransız lisesidir. Akademik mükemmeliyeti ve zengin tarihi ile tanınır. <br> • 2025 Mezunları Okul İkincisi <br> • 4x Onur Ödülü (2022, 2023, 2024, 2025) <br> • Metaclass Eğitim Sistemi Projesi",
-        cms_desc: "EPFL, teknoloji ve mühendislik alanında öncü olan, dünya çapında en iyi 25 üniversiteden biridir. <br> • Şu anda CMS hazırlık sınıfında okuyorum ve burada Bilgisayar Mühendisliği lisans programı okumayı planlıyorum.",},
+        cms_desc: "EPFL, teknoloji ve mühendislik alanında öncü olan, dünya çapında en iyi 25 üniversiteden biridir. <br> • Şu anda CMS hazırlık sınıfında okuyorum ve burada Bilgisayar Mühendisliği lisans programı okumayı planlıyorum.",
+        banner_title: "Önemli Güvenlik Uyarısı",
+        popup_title: "Önemli Güvenlik Uyarısı",
+        popup_text: "denizhonigs.com, 31 Aralık 2025 tarihinde yetkisiz kişilerin site hosting yapılandırmasına erişim sağladığı bir güvenlik ihlali yaşamıştır. Bu yetkisiz kullanıcıların yetkileri derhal kaldırılmış ve 1 Ocak 2026 itibarıyla site erişimi tamamen güvenli hale getirilmiştir. <b>Web sitesi orijinal durumuna geri döndürülmüştür.</b> <br><br> Etkinin sınırlı olduğunu düşünmekle birlikte, 31 Aralık 2025 (14:00 GMT) ile 1 Ocak 2026 (14:00 GMT) tarihleri arasında denizhonigs.com'u ziyaret ettiyseniz, <b>bu süre zarfında paylaşılan bilgiler veya denenen işlemler kötü niyetli üçüncü taraflara yönlendirilmiş olabilir.</b> Tedbir amaçlı olarak hesaplarınızı kontrol etmenizi öneririz. Eğer herhangi bir kullanıcı bilgisi girdiyseniz şifrelerinizi değiştirmeyi ve bir satın alma girişiminde bulunduysanız bankanızla iletişime geçmeyi lütfen unutmayın. <br><br> Bu zaman dilimi içinde web sitesini ziyaret etmediyseniz herhangi bir işlem yapmanıza gerek yoktur; site şu an tamamen güvenlidir. <br><br> Sabrınız ve anlayışınız için teşekkür ederiz."
+    },
     "fr": {
         greeting: "👋 Bonjour!",
         name: "Je suis <span>Deniz Hönigs</span>",
@@ -399,7 +406,11 @@ const translations = {
         cloud: "Technologie Cloud",
         cms: "CMS (Année préparatoire)",
         sj_desc: "Saint-Joseph est un prestigieux lycée français à Istanbul, en Turquie, connu pour son excellence académique et sa riche histoire. <br> • #2 de la promotion 2025 <br> • 4x Prix d'honneur (2022, 2023, 2024, 2025) <br> • Projet du système éducatif Metaclass",
-        cms_desc: "L'EPFL est l'une des 25 meilleures universités au monde, reconnue pour sa recherche de pointe et son innovation dans les domaines de la technologie et de l'ingénierie. <br> • J'étudie actuellement dans la classe préparatoire CMS, et je prévois de poursuivre mes études ici, en visant un Bachelor en informatique.",}
+        cms_desc: "L'EPFL est l'une des 25 meilleures universités au monde, reconnue pour sa recherche de pointe et son innovation dans les domaines de la technologie et de l'ingénierie. <br> • J'étudie actuellement dans la classe préparatoire CMS, et je prévois de poursuivre mes études ici, en visant un Bachelor en informatique.",
+        banner_title: "Avis de sécurité important",
+        popup_title: "Avis de sécurité important",
+        popup_text: "Le 31 décembre 2025, denizhonigs.com a subi une faille de sécurité au cours de laquelle des utilisateurs non autorisés ont accédé temporairement à la configuration de hosting du site. Ces utilisateurs ont été supprimés et l'accès a été entièrement sécurisé le 1er janvier 2026. <b>Le site web a désormais été restauré dans son état d'origine.</b> <br><br> Bien que nous pensions que l'impact soit limité, si vous avez visité denizhonigs.com entre le 31 décembre 2025 (14:00 GMT) et le 1er janvier 2026 (14:00 GMT), <b>toute information partagée ou tentative de transaction durant cette période a pu être dirigée vers un tiers malveillant.</b> Par mesure de prudence, nous vous recommandons de surveiller vos comptes. Veuillez envisager de changer vos mots de passe si vous avez saisi des identifiants, et contactez votre établissement financier si vous avez tenté d'effectuer un achat. <br><br> Si vous n'avez pas visité le site durant cette période spécifique, aucune action n'est requise et le site est sûr. <br><br> Merci de votre patience et de votre compréhension."
+    }
 };
 
 function updateContent(language) {
@@ -490,3 +501,32 @@ sections.forEach((section, index) => {
     section.style.setProperty('--index', index);
     section.style.setProperty('--animation-delay', '0.2s');
 });
+
+// Warning Banner Logic
+const bannerExpirationDate = new Date('2026-01-31T23:59:59');
+const now = new Date();
+
+if (now < bannerExpirationDate) {
+    const banner = document.getElementById('warning-banner');
+    const modal = document.getElementById('banner-modal');
+    const closeBtn = document.querySelector('.close-modal');
+
+    // Ensure elements exist before adding listeners
+    if (banner && modal && closeBtn) {
+        banner.style.display = 'flex';
+
+        banner.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
+}
