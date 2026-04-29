@@ -339,6 +339,7 @@ const translations = {
         intern: "Stage",
         cofounder: "Co-fondateur",
         frc_mentor: "Mentor d'équipe FRC",
+        committee_member: "Membre du comité",
         gamedev: "Développeur de jeux",
         project_manager: "Chef des projets",
         dropout_desc_1: "Dropout Code est un studio de jeux indépendant que j'ai co-fondé, qui a commencé comme un projet de loisir. <br> • Plusieurs projets de jeux mobiles, dont deux ont été publiés",
