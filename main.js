@@ -1,409 +1,223 @@
-// Load translations
-const translations = {
-    "en": {
-        greeting: "👋 Hey there!",
-        name: "I'm <span>Deniz Hönigs</span>",
-        name_title: "CMS student @EPFL | Saint-Joseph '25",
-        grades: "📑 School Grades",
-        first_term: "First Term",
-        second_term: "Second Term",
-        grade_prep: "Prep Grade",
-        grade_9: "9th Grade",
-        grade_10: "10th Grade",
-        grade_11: "11th Grade",
-        grade_12: "12th Grade",
-        class_1st: "#1 in class",
-        class_3rd: "#3 in class",
-        grade_1st: "#1 in grade",
-        grade_3rd: "#3 in grade",
-        grade_top10: "Top 10 in grade",
-        test_results: "📊 Grades & Test Results",
-        jan: "January",
-        feb: "February",
-        mar: "March",
-        apr:  "April",
-        may: "May",
-        jun: "June",
-        jul: "July",
-        aug: "August",
-        sep: "September",
-        oct: "October",
-        nov: "November",
-        dec: "December",
-        listening: "Listening",
-        reading: "Reading",
-        writing: "Writing",
-        speaking: "Speaking",
-        use_of_english: "Use of English",
-        maths: "Maths",
-        english: "English",
-        oral: "Oral section",
-        written: "Written section",
-        competitions: "🏅 Competitions",
-        french: "French",
-        turkish: "Turkish",
-        german: "German",
-        latin: "Latin",
-        italian: "Italian",
-        kangourou: "Mathematical Kangaroo",
-        castor: "Castor Competition",
-        waterloo: "Fermat Contest",
-        cs: "Scientific Competition SJ",
-        coder: "Coder of the Year",
-        view_certificate: "View certificate",
-        certificate_pending: "Certificate pending",
-        covid_disclaimer: "Second term grades nullified due to the COVID-19 pandemic.",
-        pending_desc: "Results were officially published, but the certificate has not arrived yet.",
-        view: "View",
-        school_champion: "School Champion",
-        grade_champion: "Grade Champion",
-        intl_honor_roll: "International Honor Roll",
-        participation: "Participation",
-        silver: "Silver Medalist",
-        languages: "🌐 Languages",
-        mother_tongue: "Mother Tongue",
-        father_tongue: "Father Tongue",
-        c1: "C1 Proficiency",
-        c2: "C2 Mastery",
-        learning: "Learning",
-        beginner: "Beginner Level",
-        honor_certificate: "Certificate of Honor",
-        experience: "🏢 Experience",
-        extracurriculars: "💡 Extracurriculars (High School)",
-        intern: "Internship",
-        cofounder: "Co-founder",
-        frc_mentor: "FRC Team Mentor",
-        committee_member: "Committee Member",
-        gamedev: "Game Developer",
-        project_manager: "Project Manager",
-        dropout_desc_1: "Dropout Code is an indie games studio I co-founded, which started out as a hobby project. <br> • Multiple mobile game projects, of which two were published",
-        dropout_desc_2: "• Project management of multiple games across different platforms <br> • Project management of Çimen Maceraları, a mobile game commissioned by Çimen Show",
-        koda_desc: "Kod-A develops document-based technologies and solutions since 2006. <br> • Familiarized myself with various data management systems and software development processes",
-        fibabanka_desc: "Fibabanka is a leading banking firm in digital banking services. <br> • Obtained a general understanding of the fintech industry",
-        fmss_desc: "FMSS is a software company providing outsourcing services for app and web development. <br> • Learned about software development processes in a professional environment",
-        gunce_desc: "İstanbul Günceleri is a student newspaper initiative that aims to provide a platform for student voices. <br> • Redesigned social media content entirely. <br> • Managed all social media accounts",
-        mfinue_desc: "MFINUE is an international French-speaking MUN conference. <br> • Managed the conference's website <br> • Contributed to the MFINUE Connect portal <br> • Mitigated technical issues on the fly during the conference",
-        coding_desc: "• Contributed to the creation of an alumni portal for Saint-Joseph <br> • Developed various new software for the school's needs",
-        innovation_desc: "• Won a project hackathon with 25 participating teams <br> • Contributed to the creation of Erasmus+ projects, including Oku-Paylaş",
-        yillik_desc: "• Developed an online platform where seniors write yearbook notes <br> • Edited and corrected all yearbook notes",
-        frc_desc: "FRC Team 10043 Conscius Robotics is the official First Robotics Competition team of Saint-Joseph. <br> • Mentored team over around two seasons <br> • Finalist Award at Marmara Regional 2025",
-        lauzhack_desc: "LauzHack is a hackathon organized by a student association at EPFL, where I am a committee member. <br> • Staffing for LauzHack 2025 (9th edition)",
-        social_media: "Social Media Manager",
-        it_team: "IT Team",
-        coding_team: "Software Development Team",
-        innovation_team: "Innovation Team",
-        yillik_team: "SJ'25 Yearbook Committee",
-        current: "Since",
-        education: "🎓 Education and Certifications",
-        primary_school: "Primary & Middle School",
-        high_school: "High School",
-        saint_joseph: "Istanbul Saint-Joseph French High School",
-        visit_site: "Visit site",
-        projects: "🛠️ Projects",
-        digital_education: "Digital Education",
-        metaclass_desc: "Metaclass is a specially developed educational platform for the school. This platform is designed to enhance information sharing between students and teachers, and to organize course materials and announcements in a more effective manner.",
-        stem: "STEM Project",
-        mavidokunus_desc: "The project aims to prevent disabled accesible parking spot abuse, by scanning the license plate using machine learning powered text recognition and issuing fines to the violators.",
-        created_by: "Designed & developed with 🩵 by Deniz Hönigs",
-        web_games: "Web App Collection",
-        dens_desc: "dens.dev is a collection of all my web projects: Hackathon entries, infographics, AI tools, web apps and fun games. Check them out by clicking the link below.",
-        second_place: "Salutatorian (#2) of Class of 2025",
-        gpa: "High School GPA",
-        gpa_desc: "Average of 9th-12th Grades",
-        cms: "Engineering Preparatory Year",
-        sj_desc: "Saint-Joseph is a prestigious French high school in Istanbul, Turkey. <br> • #2 of Class of 2025 <br> • 4x Honor Award (2022, 2023, 2024, 2025) <br> • Metaclass Education System Project",
-        cms_desc: "EPFL is among the top 25 universities globally, ranking top 10 in Europe. <br> • Currently studying in the CMS preparatory year <br> • Plan to pursue a Bachelor's degree in Computer Science here.",
-        webdev: "Web Development",
-        cloud: "Cloud Technologies",
-        math_comp: "Mathematics",
-        compsci_comp: "CS & Coding",
-        stem_comp: "STEM & Robotics",
-        hackathons: "Hackathons",
-        organizers_prize: "Organizers' Prize",
-        casus: "Who is the Spy?",
-        web_game: "Web Game",
-        ai_app: "AI / ML App",
-        casus_desc: "A social deduction party game where the primary goal is to identify the hidden spy(s) or, as the spy, to deduce the secret location/person.",
-        swissai: "Swiss Weather Intelligence System",
-        swissai_desc: "An AI-powered weather forecasting web application that provides accurate weather predictions and personalized recommendations using machine learning algorithms and real-time data.",
-        premiere: "Junior Year",
-        seconde: "Sophomore Year",
-        terminale: "Senior Year",
-        spe_maths: "(Specialty Maths)",
-        individuel: "(Individual)",
+// ===== TRANSLATIONS (key-first: find a key, see all languages at once) =====
+const T = {
+    // ── Bio Card ──
+    intro_greeting: {
+        en: "Hey, I'm Deniz!",
+        tr: "Selam, ben Deniz!",
+        fr: "Salut, c'est Deniz!"
     },
-    "tr": {
-        greeting: "👋 Merhaba!",
-        name: "Ben, <span>Deniz Hönigs</span>",
-        name_title: "EPFL'de CMS öğrencisi | Saint-Joseph '25",
-        grades: "📑 Okul Notları",
-        first_term: "Birinci Dönem",
-        second_term: "İkinci Dönem",
-        grade_prep: "Hazırlık Sınıfı",
-        grade_9: "9. Sınıf",
-        grade_10: "10. Sınıf",
-        grade_11: "11. Sınıf",
-        grade_12: "12. Sınıf",
-        class_1st: "Sınıf 1.si",
-        class_3rd: "Sınıf 3.sü",
-        grade_1st: "Dönem 1.si",
-        grade_3rd: "Dönem 3.sü",
-        grade_top10: "Dönemde ilk 10",
-        test_results: "📊 Notlar & Sınav Sonuçları",
-        jan: "Ocak",
-        feb: "Şubat",
-        mar: "Mart",
-        apr:  "Nisan",
-        may: "Mayıs",
-        jun: "Haziran",
-        jul: "Temmuz",
-        aug: "Ağustos",
-        sep: "Eylül",
-        oct: "Ekim",
-        nov: "Kasım",
-        dec: "Aralık",
-        listening: "Dinleme",
-        reading: "Okuma",
-        writing: "Yazma",
-        speaking: "Konuşma",
-        use_of_english: "Dil Yetkinliği",
-        maths: "Matematik",
-        english: "İngilizce",
-        oral: "Sözlü bölüm",
-        written: "Yazılı bölüm",
-        competitions: "🏅 Yarışmalar",
-        french: "Fransızca",
-        turkish: "Türkçe",
-        german: "Almanca",
-        latin: "Latince",
-        italian: "İtalyanca",
-        kangourou: "Kanguru Matematik",
-        castor: "Castor Yarışması",
-        waterloo: "Fermat Yarışması",
-        cs: "SJ Bilim Yarışması",
-        coder: "Yılın Kodcusu",
-        view_certificate: "Sertifikayı görüntüle",
-        certificate_pending: "Sertifika bekleniyor",
-        covid_disclaimer: "İkinci dönem notları, COVID-19 pandemisi nedeniyle silindi.",
-        pending_desc: "Sonuçlar resmi olarak yayınlandı, ancak sertifika henüz ulaşmadı.",
-        view: "Görüntüle",
-        school_champion: "Okul Şampiyonu",
-        grade_champion: "Dönem Şampiyonu",
-        intl_honor_roll: "Uluslararası Onur Listesi",
-        participation: "Katılım",
-        silver: "Gümüş Madalya",
-        languages: "🌐 Diller",
-        mother_tongue: "Ana Dil",
-        father_tongue: "Baba Dili",
-        c1: "C1 Yetkinlik",
-        c2: "C2 Uzmanlık",
-        learning: "Öğreniyorum",
-        beginner: "Başlangıç Düzeyi",
-        honor_certificate: "Onur Belgesi",
-        experience: "🏢 Deneyim",
-        extracurriculars: "💡 Okul Dışı Etkinlikler (Lise)",
-        intern: "Staj",
-        cofounder: "Kurucu Ortak",
-        frc_mentor: "FRC Takım Mentoru",
-        committee_member: "Komite Üyesi",
-        gamedev: "Oyun Geliştirici",
-        project_manager: "Proje Yöneticisi",
-        game: "Oyun Geliştirme",
-        project_management: "Proje Yönetimi",
-        dropout_desc_1: "Dropout Code, hobi projesi olarak başladığım bağımsız bir oyun stüdyosudur. <br> • Birkaç mobil oyun projesi, bunlardan ikisi yayınlandı",
-        dropout_desc_2: "• Farklı platformlarda birden fazla oyunun proje yönetimi <br> • Çimen Show için sipariş edilen Çimen Maceraları adlı mobil oyunun proje yönetimi",
-        koda_desc: "Kod-A, 2006'dan beri belge tabanlı teknolojiler ve çözümler geliştirmektedir. <br> • Çeşitli veri yönetim sistemleri ve yazılım geliştirme süreçleri hakkında bilgi edindim",
-        fibabanka_desc: "Fibabanka, dijital bankacılık hizmetlerinde önde gelen bir bankadır. <br> • Fintech endüstrisi hakkında genel bir anlayış kazandım",
-        fmss_desc: "FMSS, uygulama ve web geliştirme için dış kaynak sağlama hizmetleri sunan bir yazılım şirketidir. <br> • Profesyonel bir ortamda yazılım geliştirme süreçlerini öğrendim",
-        gunce_desc: "İstanbul Günceleri, öğrenci seslerine platform sağlamak amacıyla kurulmuş bir öğrenci gazetesidir. <br> • Sosyal medya içeriğini tamamen yeniden tasarladım. <br> • Tüm sosyal medya hesaplarını yönettim",
-        mfinue_desc: "MFINUE, uluslararası Fransızca konuşan bir MUN konferansıdır. <br> • Konferansın web sitesini yönettim <br> • MFINUE Connect portalına katkıda bulundum <br> • Konferans sırasında teknik sorunları anında çözdüm",
-        coding_desc: "• Saint-Joseph için bir mezun portalının oluşturulmasına katkıda bulundum <br> • Okulun ihtiyaçları için çeşitli yeni yazılımlar geliştirdim",
-        innovation_desc: "• 25 katılımcı takım arasından bir proje hackathonunu kazandık <br> • Oku-Paylaş dahil olmak üzere Erasmus+ projelerinin oluşturulmasına katkıda bulundum",
-        yillik_desc: "• Mezunların yıl sonu notlarını yazdığı çevrimiçi bir platform geliştirdik <br> • Tüm yıl sonu notlarını düzenledik ve düzelttik",
-        frc_desc: "FRC Takımı 10043 Conscius Robotics, Saint-Joseph'in resmi First Robotics Competition takımıdır. <br> • Yaklaşık iki sezon boyunca takıma mentorluk yaptım <br> • Marmara Bölge 2025'te Finalist Ödülü",
-        lauzhack_desc: "LauzHack, EPFL'deki üyesi olduğum bir öğrenci kulübü tarafından düzenlenen bir hackathondur. <br> • LauzHack 2025 (9. edisyon) için gönüllülük yaptım",
-        social_media: "Sosyal Medya Sorumlusu",
-        it_team: "IT Ekibi",
-        coding_team: "Yazılım Geliştirme Takımı",
-        innovation_team: "İnovasyon Takımı",
-        yillik_team: "SJ'25 Yıllık Komitesi",
-        current: "Başlangıç:",
-        education: "🎓 Eğitim ve Sertifikalar",
-        primary_school: "İlkokul & Ortaokul",
-        high_school: "Lise",
-        saint_joseph: "İstanbul Saint-Joseph Fransız Lisesi",
-        visit_site: "Siteye git",
-        projects: "🛠️ Projeler",
-        digital_education: "Dijital Eğitim",
-        metaclass_desc: "Metaclass, okul içim özel geliştirilen bir eğitim platformudur. Bu platform, öğrenciler ve öğretmenler arasındaki bilgi paylaşımını geliştirmek, ders materyallerini ve duyurularını düzenlemekte daha etkili bir yöntem olarak tasarlanmıştır.",
-        stem: "STEM Projesi",
-        mavidokunus_desc: "Bu proje, engelli park yerlerinin kötüye kullanımını önlemeyi amaçlamaktadır. Makine öğrenmesi destekli metin tanıma sistemi kullanarak plaka taranır ve ihlal edenlere ceza kesilir.",
-        created_by: "Deniz Hönigs tarafından 🩵 ile tasarlandı ve geliştirildi",
-        web_games: "Web Uygulama Koleksiyonu",
-        dens_desc: "dens.dev, tüm web projelerimin bir koleksiyonudur: Hackathon projeleri, infografikler, AI araçları, web uygulamaları ve eğlenceli oyunlar. Göz atmak için aşağıdaki bağlantıya tıklayabilirsiniz.",
-        second_place: "2025 Mezunları Okul İkincisi",
-        gpa: "Lise Ortalaması",
-        gpa_desc: "9-12. Sınıf Ortalaması",
-        cms: "Mühendislik Hazırlık Sınıfı",
-        sj_desc: "Saint-Joseph, İstanbul, Türkiye'de prestijli bir Fransız lisesidir. <br> • 2025 Mezunları Okul İkincisi <br> • 4x Onur Belgesi (2022, 2023, 2024, 2025) <br> • Metaclass Eğitim Sistemi Projesi",
-        cms_desc: "EPFL, dünya genelinde ilk 25 üniversite arasında yer almakta olup, Avrupa'da ilk 10'da bulunmaktadır. <br> • Şu anda CMS hazırlık sınıfında eğitim görmekteyim <br> • Burada Bilgisayar Bilimleri alanında Lisans eğitimi almayı planlıyorum.",
-        webdev: "Web Geliştirme",
-        cloud: "Bulut Teknolojileri",
-        math_comp: "Matematik",
-        compsci_comp: "Bilişim ve Yazılım",
-        stem_comp: "STEM & Robotik",
-        hackathons: "Hackathonlar",
-        organizers_prize: "Organizatör Ödülü",
-        casus: "Casus Kim?",
-        web_game: "Web Oyunu",
-        ai_app: "AI / ML Uygulaması",
-        casus_desc: "Gizli casusu bulmayı amaçlayan bir parti oyunudur. Casus olarak, gizli konumu veya kişiyi tahmin etmeye çalışırsınız.",
-        swissai: "İsviçre Hava Durumu Bilgi Sistemi",
-        swissai_desc: "Makine öğrenimi algoritmaları ve gerçek zamanlı veriler kullanarak doğru hava tahminleri ve kişiselleştirilmiş öneriler sunan AI destekli bir hava durumu tahmin web uygulaması.",
-        premiere: "11. Sınıf",
-        seconde: "10. Sınıf",
-        terminale: "12. Sınıf",
-        spe_maths: "(Matematik Dalı)",
-        individuel: "(Bireysel)",
+    bio_name: { en: "<span>Deniz Hönigs</span>", tr: "<span>Deniz Hönigs</span>", fr: "<span>Deniz Hönigs</span>" },
+    bio_title: { en: "Computer Science Student at EPFL", tr: "EPFL Bilgisayar Mühendisliği Öğrencisi", fr: "Étudiant en informatique à l'EPFL" },
+    bio_text: {
+        en: "<b>Hello there! </b> I am a wannabe software engineer from Istanbul 🇹🇷, currently living in Lausanne 🇨🇭. Apart from my studies at EPFL, I try to create little side quest projects here and there.",
+        tr: "<b>Selam! </b>Ben İstanbul 🇹🇷 'dan gelen, şu sıralar Lozan 🇨🇭'de yaşayan, bir bilgisayar mühendisi adayıyım. EPFL'deki eğitimimin yanı sıra, kendi çapımda ufak side-quest projeler üretiyorum.",
+        fr: "<b>Salut! </b>Je suis un informaticien en herbe d'Istanbul 🇹🇷, actuellement en train de vivre à Lausanne 🇨🇭. En dehors de mes études à l'EPFL, j'essaie de créer de petits projets side-quest ici et là."
     },
-    "fr": {
-        greeting: "👋 Bonjour!",
-        name: "C'est <span>Deniz Hönigs</span>",
-        name_title: "Étudiant CMS à l'EPFL | Saint-Joseph '25",
-        grades: "📑 Notes d'école",
-        first_term: "Premier Semestre",
-        second_term: "Deuxième Semestre",
-        grade_prep: "Préparatoire",
-        grade_9: "9ème",
-        grade_10: "10ème",
-        grade_11: "11ème",
-        grade_12: "12ème",
-        class_1st: "#1 de la classe",
-        class_3rd: "#3 de la classe",
-        grade_1st: "#1 de la promotion",
-        grade_3rd: "#3 de la promotion",
-        grade_top10: "Top 10 de la promotion",
-        test_results: "📊 Moyennes & résultats d'épreuves",
-        jan: "Janvier",
-        feb: "Février",
-        mar: "Mars",
-        apr:  "Avril",
-        may: "Mai",
-        jun: "Juin",
-        jul: "Juillet",
-        aug: "Août",
-        sep: "Septembre",
-        oct: "Octobre",
-        nov: "Novembre",
-        dec: "Décembre",
-        listening: "Compréhension orale",
-        reading: "Compréhension écrite",
-        writing: "Production écrite",
-        speaking: "Production orale",
-        use_of_english: "Usage de la langue",
-        maths: "Mathématiques",
-        english: "Anglais",
-        oral: "Épreuve orale",
-        written: "Épreuve écrite",
-        competitions: "🏅 Concours",
-        french: "Français",
-        turkish: "Turc",
-        german: "Allemand",
-        latin: "Latin",
-        italian: "Italien",
-        kangourou: "Kangourou des mathématiques",
-        castor: "Concours Castor",
-        waterloo: "Concours Fermat",
-        cs: "Concours Scientifique SJ",
-        coder: "Codeur de l'année",
-        view_certificate: "Afficher le diplôme",
-        certificate_pending: "Diplôme en attente",
-        covid_disclaimer: "Les notes du second semestre ont été supprimées en raison de la pandemie de COVID-19",
-        pending_desc: "Les résultats ont été officiellement publiés, mais le certificat n'est pas encore arrivé.",
-        view: "Afficher",
-        school_champion: "Champion d'école",
-        grade_champion: "Champ. de promo",
-        intl_honor_roll: "Liste d'honneur international",
-        participation: "Participation",
-        silver: "Médaillé d'argent",
-        languages: "🌐 Langues",
-        mother_tongue: "Langue maternelle",
-        father_tongue: "Langue paternelle",
-        c1: "C1 Maîtrise",
-        c2: "C2 Expertise",
-        learning: "En train d'apprendre",
-        beginner: "Niveau débutant",
-        honor_certificate: "Prix d'honneur",
-        experience: "🏢 Expérience",
-        extracurriculars: "💡 Activités périscolaires (lycée)",
-        intern: "Stage",
-        cofounder: "Co-fondateur",
-        frc_mentor: "Mentor d'équipe FRC",
-        committee_member: "Membre du comité",
-        gamedev: "Développeur de jeux",
-        project_manager: "Chef des projets",
-        dropout_desc_1: "Dropout Code est un studio de jeux indépendant que j'ai co-fondé, qui a commencé comme un projet de loisir. <br> • Plusieurs projets de jeux mobiles, dont deux ont été publiés",
-        dropout_desc_2: "• Gestion de projet de plusieurs jeux sur différentes plateformes <br> • Gestion de projet de Çimen Maceraları, un jeu mobile commandé par Çimen Show",
-        koda_desc: "Kod-A développe des technologies et des solutions basées sur les documents depuis 2006. <br> • Je me suis familiarisé avec divers systèmes de gestion de données et processus de développement logiciel",
-        fibabanka_desc: "Fibabanka est une banque leader dans les services bancaires numériques. <br> • J'ai obtenu une compréhension générale de l'industrie fintech",
-        fmss_desc: "FMSS est une entreprise de logiciels fournissant des services d'externalisation pour le développement d'applications et de sites web. <br> • J'ai appris les processus de développement logiciel dans un environnement professionnel",
-        gunce_desc: "İstanbul Günceleri est une initiative de journal étudiant qui vise à fournir une plateforme pour les voix étudiantes. <br> • J'ai entièrement repensé le contenu des réseaux sociaux. <br> • J'ai géré tous les comptes de réseaux sociaux",
-        mfinue_desc: "MFINUE est une conférence MUN francophone internationale. <br> • J'ai géré le site web de la conférence <br> • J'ai contribué au portail MFINUE Connect <br> • J'ai résolu des problèmes techniques en temps réel pendant la conférence",
-        coding_desc: "• J'ai contribué à la création d'un portail pour les anciens élèves de Saint-Joseph <br> • J'ai développé divers nouveaux logiciels pour les besoins de l'école",
-        innovation_desc: "• J'ai remporté un hackathon de projets avec 25 équipes participantes <br> • J'ai contribué à la création de projets Erasmus+, y compris Oku-Paylaş",
-        yillik_desc: "• J'ai développé une plateforme en ligne où les seniors écrivent des notes d'annuaire <br> • J'ai édité et corrigé toutes les notes d'annuaire",
-        frc_desc: "L'équipe FRC 10043 Conscius Robotics est l'équipe officielle de la First Robotics Competition de Saint-Joseph. <br> • J'ai mentoré l'équipe pendant presque deux saisons <br> • Prix du finaliste au Marmara Regional 2025",
-        lauzhack_desc: "LauzHack est un hackathon organisé par une association étudiante de l'EPFL, dont je suis membre du comité. <br> • Personnel pour LauzHack 2025 (9ème édition)",
-        social_media: "Chef des réseaux sociaux",
-        it_team: "Équipe TI",
-        coding_team: "Équipe de dév. de logiciels",
-        innovation_team: "Équipe d'innovation",
-        yillik_team: "Comité de Palmarès SJ'25",
-        current: "depuis",
-        education: "🎓 Éducation et certifications",
-        primary_school: "École primaire & collège",
-        high_school: "Lycée",
-        saint_joseph: "Lycée Français Saint-Joseph d'Istanbul",
-        visit_site: "Visiter le site",
-        projects: "🛠️ Projets",
-        digital_education: "Éducation numérique",
-        metaclass_desc: "Metaclass est une plateforme éducative spécialement développée pour l'école. Cette plateforme est conçue pour améliorer le partage d'informations entre les élèves et les enseignants, et pour organiser les supports de cours et les annonces de manière plus efficace.",
-        stem: "Projet STEM",
-        mavidokunus_desc: "Le projet vise à prévenir l'abus des places de parking accessibles aux personnes handicapées, en scannant la plaque d'immatriculation à l'aide de la reconnaissance de texte alimentée par l'apprentissage automatique et en infligeant des amendes aux contrevenants.",
-        created_by: "Conçu et développé avec 🩵 par Deniz Hönigs",
-        web_games: "Collection d'applications web",
-        dens_desc: "dens.dev est une collection de tous mes projets web : projets de hackathon, infographies, outils d'IA, applications web et jeux amusants. Vous pouvez les consulter en cliquant sur le lien ci-dessous.",
-        second_place: "Deuxième de la promotion 2025",
-        gpa: "Moyenne Lycée",
-        gpa_desc: "Moyenne de 9ème à 12ème",
-        cms: "Année préparatoire en ingénierie",
-        sj_desc: "Saint-Joseph est un prestigieux lycée français à Istanbul, en Turquie. <br> • Deuxième de la promotion 2025 <br> • 4x Prix d'honneur (2022, 2023, 2024, 2025) <br> • Projet du système éducatif Metaclass",
-        cms_desc: "L'EPFL est parmi les 25 meilleures universités au monde, se classant dans le top 10 en Europe. <br> • Actuellement étudiant en année préparatoire CMS <br> • Prévoit de poursuivre un baccalauréat en informatique ici.",
-        webdev: "Développement Web",
-        cloud: "Technologies Cloud",
-        math_comp: "Mathématiques",
-        compsci_comp: "Informatique & Codage",
-        stem_comp: "STEM & Robotiques",
-        hackathons: "Hackathons",
-        organizers_prize: "Prix des organisateurs",
-        casus: "Qui est l'espion ?",
-        web_game: "Jeu Web",
-        ai_app: "Application IA / ML",
-        casus_desc: "Un jeu de déduction sociale où le but principal est d'identifier l'espion caché ou, en tant qu'espion, de déduire le lieu/personne secret.",
-        swissai: "Système suisse d'intelligence météorologique",
-        swissai_desc: "Une application web de prévision météorologique alimentée par l'IA qui fournit des prévisions météorologiques précises et des recommandations personnalisées en utilisant des algorithmes d'apprentissage automatique et des données en temps réel.",
-        premiere: "Première",
-        seconde: "Seconde",
-        terminale: "Terminale",
-        spe_maths: "(Spécialité mathématiques)",
-        individuel: "(Individuel)",       
-    }
+
+    // ── Section Titles ──
+    experience: { en: "Experience", tr: "Deneyim", fr: "Expérience" },
+    education: { en: "Education", tr: "Eğitim", fr: "Éducation" },
+    certifications: { en: "Certifications", tr: "Sertifikalar", fr: "Certifications" },
+    projects: { en: "Projects", tr: "Projeler", fr: "Projets" },
+    competitions: { en: "Competitions", tr: "Yarışmalar", fr: "Concours" },
+    test_results: { en: "Grades & Test Results", tr: "Notlar & Sınav Sonuçları", fr: "Moyennes & résultats d'épreuves" },
+    languages: { en: "Languages", tr: "Diller", fr: "Langues" },
+
+    // ── Languages (bio pills) ──
+    turkish: { en: "Turkish", tr: "Türkçe", fr: "Turc" },
+    german: { en: "German", tr: "Almanca", fr: "Allemand" },
+    french: { en: "French", tr: "Fransızca", fr: "Français" },
+    english: { en: "English", tr: "İngilizce", fr: "Anglais" },
+    latin: { en: "Latin", tr: "Latince", fr: "Latin" },
+    italian: { en: "Italian", tr: "İtalyanca", fr: "Italien" },
+    native: { en: "Native", tr: "Anadil", fr: "Natif" },
+    c1: { en: "C1", tr: "C1", fr: "C1" },
+    c2: { en: "C2", tr: "C2", fr: "C2" },
+    beginner: { en: "Beginner", tr: "Başlangıç", fr: "Débutant" },
+
+    // ── Months ──
+    jan: { en: "January", tr: "Ocak", fr: "Janvier" },
+    feb: { en: "February", tr: "Şubat", fr: "Février" },
+    mar: { en: "March", tr: "Mart", fr: "Mars" },
+    apr: { en: "April", tr: "Nisan", fr: "Avril" },
+    may: { en: "May", tr: "Mayıs", fr: "Mai" },
+    jun: { en: "June", tr: "Haziran", fr: "Juin" },
+    jul: { en: "July", tr: "Temmuz", fr: "Juillet" },
+    aug: { en: "August", tr: "Ağustos", fr: "Août" },
+    sep: { en: "September", tr: "Eylül", fr: "Septembre" },
+    oct: { en: "October", tr: "Ekim", fr: "Octobre" },
+    nov: { en: "November", tr: "Kasım", fr: "Novembre" },
+    dec: { en: "December", tr: "Aralık", fr: "Décembre" },
+
+    // ── Experience Roles ──
+    intern: { en: "Intern", tr: "Stajyer", fr: "Stagiaire" },
+    cofounder: { en: "Co-founder", tr: "Kurucu Ortak", fr: "Co-fondateur" },
+    frc_mentor: { en: "Conscius Robotics - FRC Team Mentor", tr: "Conscius Robotics - FRC Takım Mentoru", fr: "Conscius Robotics - Mentor d'équipe FRC" },
+    committee_member: { en: "Committee Member", tr: "Komite Üyesi", fr: "Membre du comité" },
+    gamedev: { en: "Game Developer", tr: "Oyun Geliştirici", fr: "Développeur de jeux" },
+    project_manager: { en: "Project Manager", tr: "Proje Yöneticisi", fr: "Chef des projets" },
+    current: { en: "Since", tr: "Başlangıç:", fr: "depuis" },
+    current_label: { en: "Present", tr: "Güncel", fr: "Présent" },
+
+    // ── Experience Descriptions ──
+    lauzhack_desc: {
+        en: "LauzHack is the largest student-led hackathon at EPFL. <br>• Staffing for LauzHack 2025 <br>• Swag, design and organization of LauzHack 2026 (10th edition)",
+        tr: "LauzHack, EPFL'deki en büyük öğrenci liderliğindeki hackathondur. <br>• LauzHack 2025 için gönüllülük yaptım <br>• LauzHack 2026'nın (10. edisyon) tişört, tasarım ve organizasyonu ile ilgilendim.",
+        fr: "LauzHack est le plus grand hackathon étudiant de l'EPFL. <br>• Personnel pour LauzHack 2025 <br>• Swag, design et organisation de LauzHack 2026 (10ème édition)"
+    },
+    frc_desc: {
+        en: "FRC Team 10043 Conscius Robotics is the official First Robotics Competition team of <span>Saint-Joseph High School</span>. <br>• Mentored team over around two seasons <br>• Finalist Award at Marmara Regional 2025",
+        tr: "FRC Takımı 10043 Conscius Robotics, <span>Saint-Joseph Lisesi</span>'nin resmi First Robotics Competition takımıdır. <br>• Yaklaşık iki sezon boyunca takıma mentorluk yaptım <br>• Marmara Bölge 2025'te Finalist Ödülü",
+        fr: "L'équipe FRC 10043 Conscius Robotics est l'équipe officielle de la First Robotics Competition de <span>Saint-Joseph High School</span>. <br>• J'ai mentoré l'équipe pendant presque deux saisons <br>• Prix du finaliste au Marmara Regional 2025"
+    },
+    dropout_desc_2: {
+        en: "• Project management of multiple games across different platforms <br>• Project management of Çimen Maceraları, a mobile game commissioned by Çimen Show",
+        tr: "• Farklı platformlarda birden fazla oyunun proje yönetimi <br>• Çimen Show için sipariş edilen Çimen Maceraları adlı mobil oyunun proje yönetimi",
+        fr: "• Gestion de projet de plusieurs jeux sur différentes plateformes <br>• Gestion de projet de Çimen Maceraları, un jeu mobile commandé par Çimen Show"
+    },
+    dropout_desc_1: {
+        en: "Dropout Code is an indie games studio I co-founded, which started out as a hobby project. <br>• Multiple mobile game projects, of which two were published",
+        tr: "Dropout Code, hobi projesi olarak başladığım bağımsız bir oyun stüdyosudur. <br>• Birkaç mobil oyun projesi, bunlardan ikisi yayınlandı",
+        fr: "Dropout Code est un studio de jeux indépendant que j'ai co-fondé, qui a commencé comme un projet de loisir. <br>• Plusieurs projets de jeux mobiles, dont deux ont été publiés"
+    },
+    fmss_desc: {
+        en: "• Learned about software development processes in a professional environment",
+        tr: "• Profesyonel bir ortamda yazılım geliştirme süreçlerini öğrendim",
+        fr: "• J'ai appris les processus de développement logiciel dans un environnement professionnel"
+    },
+    fibabanka_desc: {
+        en: "• Obtained a general understanding of the fintech industry",
+        tr: "• Fintech endüstrisi hakkında genel bir anlayış kazandım",
+        fr: "• J'ai obtenu une compréhension générale de l'industrie fintech"
+    },
+    koda_desc: {
+        en: "• Familiarized myself with various data management systems and software development processes",
+        tr: "• Çeşitli veri yönetim sistemleri ve yazılım geliştirme süreçleri hakkında bilgi edindim",
+        fr: "• Je me suis familiarisé avec divers systèmes de gestion de données et processus de développement logiciel"
+    },
+
+    // ── Education ──
+    informatique: { en: "Computer Science", tr: "Bilgisayar Mühendisliği", fr: "Informatique" },
+    epfl_cs_desc: {
+        en: "Bachelor's degree in Computer Science - 180 ECTS",
+        tr: "Bilgisayar Bilimleri Lisans Derecesi - 180 ECTS",
+        fr: "Bachelor (licence) en Informatique - 180 ECTS"
+    },
+    cms_desc: {
+        en: "Mandatory preparatory class for holders of a foreign high school diploma",
+        tr: "Yabancı lise diplomasına sahip olanlar için zorunlu hazırlık sınıfı",
+        fr: "Classe préparatoire obligatoire pour les titulaires d'un diplôme de fin d'études secondaires étranger"
+    },
+    saint_joseph: { en: "Istanbul Saint-Joseph French High School", tr: "İstanbul Saint-Joseph Fransız Lisesi", fr: "Lycée Français Saint-Joseph d'Istanbul" },
+    sj_desc: {
+        en: "Prestigious French high school in Istanbul, Turkey. <br>• #2 of Class of 2025 <br>• 4x Honor Award <br>• Metaclass Education System Project",
+        tr: "İstanbul'da prestijli bir Fransız lisesi. <br>• 2025 Okul İkincisi <br>• 4x Onur Ödülü <br>• Metaclass Eğitim Sistemi Projesi",
+        fr: "Prestigieux lycée français à Istanbul, Turquie. <br>• 2ème de la promotion 2025 <br>• 4x Prix d'honneur <br>• Projet du système éducatif Metaclass"
+    },
+    visit_site: { en: "Visit site", tr: "Siteye git", fr: "Visiter le site" },
+
+    // ── Certifications ──
+    webdev: { en: "Web Development", tr: "Web Geliştirme", fr: "Développement Web" },
+    cloud: { en: "Cloud Technologies", tr: "Bulut Teknolojileri", fr: "Technologies Cloud" },
+
+    // ── Projects ──
+    swissai: { en: "Swiss Weather Intelligence System", tr: "İsviçre Hava Durumu Bilgi Sistemi", fr: "Système suisse d'intelligence météorologique" },
+    swissai_desc: {
+        en: "Organizer's Prize at the <b> Swiss {ai} Weeks Lausanne 2025 Hackathon </b> <br> A weather forecasting and early warning system demo, using machine learning algorithms and real-time data.",
+        tr: "<b> Swiss {ai} Weeks Lausanne 2025 Hackathonu </b>'nda Juri Özel Ödülü <br> Makine öğrenmesi algoritmaları ve gerçek zamanlı verileri kullanarak bir hava tahmini ve erken uyarı sistemi demosu.",
+        fr: "Prix du jury au <b> Swiss {ai} Weeks Lausanne 2025 Hackathon </b> <br> Démonstration d'un système de prévision météorologique et d'alerte précoce, utilisant des algorithmes d'apprentissage automatique et des données en temps réel."
+    },
+    casus: { en: "Who is the Spy?", tr: "Casus Kim?", fr: "Qui est l'espion ?" },
+    casus_desc: {
+        en: "A social deduction party game where the primary goal is to identify the hidden spy(s) or, as the spy, to deduce the secret location/person.",
+        tr: "Gizli casusu bulmayı amaçlayan bir parti oyunudur. Casus olarak, gizli konumu veya kişiyi tahmin etmeye çalışırsınız.",
+        fr: "Un jeu de déduction sociale où le but principal est d'identifier l'espion caché ou, en tant qu'espion, de déduire le lieu/personne secret."
+    },
+    dens_desc: {
+        en: "A collection of all my web projects: Hackathon entries, infographics, AI tools, web apps and fun games. Check them out by clicking the link below.",
+        tr: "Tüm web projelerimin bir koleksiyonu: Hackathon projeleri, infografikler, AI araçları, web uygulamaları ve eğlenceli oyunlar. Göz atmak için aşağıdaki bağlantıya tıklayabilirsiniz.",
+        fr: "Une collection de tous mes projets web : projets de hackathon, infographies, outils d'IA, applications web et jeux amusants. Vous pouvez les consulter en cliquant sur le lien ci-dessous."
+    },
+    metaclass_desc: {
+        en: "Metaclass is a specially developed educational platform for Saint-Joseph High School. This platform is designed to enhance information sharing between students and teachers, and to organize course materials and announcements in a more effective manner.",
+        tr: "Metaclass, Saint-Joseph Lisesi için özel olarak geliştirilmiş bir eğitim platformudur. Bu platform, öğrenciler ve öğretmenler arasındaki bilgi paylaşımını geliştirmek ve ders materyallerini ile duyuruları daha etkili bir şekilde düzenlemek amacıyla tasarlanmıştır.",
+        fr: "Metaclass est une plateforme éducative spécialement développée pour le Lycée Saint-Joseph. Cette plateforme est conçue pour améliorer le partage d'informations entre les élèves et les enseignants, et pour organiser les supports de cours et les annonces de manière plus efficace."
+    },
+    mavidokunus_desc: {
+        en: "The project aims to prevent disabled accessible parking spot abuse, by scanning the license plate using machine learning powered text recognition and issuing fines to the violators.",
+        tr: "Bu proje, engelli park yerlerinin kötüye kullanımını önlemeyi amaçlamaktadır. Makine öğrenmesi destekli metin tanıma sistemi kullanarak plaka taranır ve ihlal edenlere ceza kesilir.",
+        fr: "Le projet vise à prévenir l'abus des places de parking accessibles aux personnes handicapées, en scannant la plaque d'immatriculation à l'aide de la reconnaissance de texte alimentée par l'apprentissage automatique et en infligeant des amendes aux contrevenants."
+    },
+
+    // ── Project Tags ──
+    ai_app: { en: "AI / ML", tr: "AI / ML", fr: "IA / ML" },
+    web_game: { en: "Web Game", tr: "Web Oyunu", fr: "Jeu Web" },
+    web_games: { en: "Web App Collection", tr: "Web Uygulama Koleksiyonu", fr: "Collection d'applications web" },
+    digital_education: { en: "Digital Education", tr: "Dijital Eğitim", fr: "Éducation numérique" },
+    stem: { en: "STEM Project", tr: "STEM Projesi", fr: "Projet STEM" },
+
+    // ── Competitions ──
+    math_comp: { en: "Mathematics", tr: "Matematik", fr: "Mathématiques" },
+    compsci_comp: { en: "CS & Coding", tr: "Bilişim ve Yazılım", fr: "Informatique & Codage" },
+    stem_comp: { en: "STEM & Robotics", tr: "STEM & Robotik", fr: "STEM & Robotiques" },
+    kangourou: { en: "Mathematical Kangaroo", tr: "Kanguru Matematik", fr: "Kangourou des mathématiques" },
+    castor: { en: "Castor Competition", tr: "Castor Yarışması", fr: "Concours Castor" },
+    waterloo: { en: "Fermat Contest", tr: "Fermat Yarışması", fr: "Concours Fermat" },
+    cs: { en: "Scientific Competition SJ", tr: "SJ Bilim Yarışması", fr: "Concours Scientifique SJ" },
+    hackathons: { en: "Hackathons", tr: "Hackathonlar", fr: "Hackathons" },
+    organizers_prize: { en: "Organizers' Prize", tr: "Organizatör Ödülü", fr: "Prix des organisateurs" },
+    grade_champion: { en: "Grade Champion", tr: "Dönem Şampiyonu", fr: "Champ. de promo" },
+    intl_honor_roll: { en: "International Honor Roll", tr: "Uluslararası Onur Listesi", fr: "Liste d'honneur international" },
+    silver: { en: "Silver Medalist", tr: "Gümüş Madalya", fr: "Médaillé d'argent" },
+    view: { en: "View", tr: "Görüntüle", fr: "Afficher" },
+    view_certificate: { en: "View certificate", tr: "Sertifikayı görüntüle", fr: "Afficher le diplôme" },
+
+    /* ── Competition Levels ──
+    premiere: { en: "Junior Year", tr: "11. Sınıf", fr: "Première" },
+    seconde: { en: "Sophomore Year", tr: "10. Sınıf", fr: "Seconde" },
+    terminale: { en: "Senior Year", tr: "12. Sınıf", fr: "Terminale" },
+    spe_maths: { en: "(Specialty Maths)", tr: "(Matematik Dalı)", fr: "(Spécialité mathématiques)" },
+    individuel: { en: "(Individual)", tr: "(Bireysel)", fr: "(Individuel)" },
+
+    // ── Test Results / Grades ──
+    gpa: { en: "High School GPA", tr: "Lise Ortalaması", fr: "Moyenne Lycée" },
+    gpa_desc: { en: "Average of 9th-12th Grades", tr: "9-12. Sınıf Ortalaması", fr: "Moyenne de 9ème à 12ème" },
+    second_place: { en: "Salutatorian (#2) of Class of 2025", tr: "2025 Mezunları Okul İkincisi", fr: "Deuxième de la promotion 2025" },
+    grade_9: { en: "9th Grade", tr: "9. Sınıf", fr: "9ème" },
+    grade_10: { en: "10th Grade", tr: "10. Sınıf", fr: "10ème" },
+    grade_11: { en: "11th Grade", tr: "11. Sınıf", fr: "11ème" },
+    grade_12: { en: "12th Grade", tr: "12. Sınıf", fr: "12ème" },
+    oral: { en: "Oral section", tr: "Sözlü bölüm", fr: "Épreuve orale" },
+    written: { en: "Written section", tr: "Yazılı bölüm", fr: "Épreuve écrite" },
+    listening: { en: "Listening", tr: "Dinleme", fr: "Compréhension orale" },
+    reading: { en: "Reading", tr: "Okuma", fr: "Compréhension écrite" },
+    writing: { en: "Writing", tr: "Yazma", fr: "Production écrite" },
+    speaking: { en: "Speaking", tr: "Konuşma", fr: "Production orale" },*/
+
+    // ── Contact / Let's stay in touch ──
+    contact_title: { en: "Let's stay in touch", tr: "İletişimde Kalalım", fr: "Restons en contact" },
+    copied: { en: "Copied!", tr: "Kopyalandı!", fr: "Copié !" },
+
+    // ── Footer ──
+    created_by: { en: "Designed & developed with 🩵 by Deniz Hönigs, with the help of Claude, duh.", tr: "Deniz Hönigs tarafından 🩵 ile tasarlandı ve geliştirildi, Claude'un yardımıyla elbette.", fr: "Conçu et développé avec 🩵 par Deniz Hönigs, avec l'aide de Claude, évidemment." },
 };
 
+// Build per-language lookup from key-first structure
+const translations = {};
+for (const [key, langs] of Object.entries(T)) {
+    for (const [lang, value] of Object.entries(langs)) {
+        if (!translations[lang]) translations[lang] = {};
+        translations[lang][key] = value;
+    }
+}
+
+// ===== TRANSLATION SYSTEM =====
 function updateContent(language) {
     document.querySelectorAll('[data-translate]').forEach(function (element) {
         const key = element.getAttribute('data-translate');
-        element.innerHTML = translations[language][key];
+        if (translations[language] && translations[language][key]) {
+            element.innerHTML = translations[language][key];
+        }
     });
 }
 
@@ -417,103 +231,184 @@ function getURLParameter(name) {
     return new URLSearchParams(window.location.search).get(name);
 }
 
-document.querySelectorAll('input[name="language"]').forEach(function (radio) {
-    radio.addEventListener('change', function () {
-        const selectedLang = this.value;
-        updateContent(selectedLang);
-        updateURLParameter('lang', selectedLang);
+// ===== LANGUAGE SELECTOR =====
+const langBtns = document.querySelectorAll('.lang-btn');
+langBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+        const lang = this.getAttribute('data-lang');
+        langBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        updateContent(lang);
+        updateURLParameter('lang', lang);
     });
 });
 
+// Initialize language
 let initialLang = getURLParameter('lang') || 'en';
 if (!translations.hasOwnProperty(initialLang)) {
     initialLang = 'en';
 }
-document.querySelector(`input[name="language"][value="${initialLang}"]`).checked = true;
+const initialBtn = document.querySelector(`.lang-btn[data-lang="${initialLang}"]`);
+if (initialBtn) {
+    langBtns.forEach(b => b.classList.remove('active'));
+    initialBtn.classList.add('active');
+}
 updateContent(initialLang);
 updateURLParameter('lang', initialLang);
 
-document.querySelectorAll('.section-title').forEach(function (sectionTitle) {
-    sectionTitle.addEventListener('click', function () {
-        const sectionId = this.getAttribute('data-target');
-        const sectionContent = document.getElementById(sectionId);
-        const chevron = this.querySelector('.chevron');
+// ===== STICKY HEADER (Hide on scroll down, show on scroll up) =====
+const stickyHeader = document.getElementById('sticky-header');
+let lastScrollY = window.scrollY;
+let ticking = false;
 
-        if (sectionContent.style.maxHeight) {
-            sectionContent.style.maxHeight = null;
-        } else {
-            sectionContent.style.maxHeight = sectionContent.scrollHeight + 'px';
+function updateHeader() {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        stickyHeader.classList.add('hidden');
+    } else {
+        stickyHeader.classList.remove('hidden');
+    }
+
+    lastScrollY = currentScrollY;
+    ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        requestAnimationFrame(updateHeader);
+        ticking = true;
+    }
+}, { passive: true });
+
+// ===== SCROLL REVEAL ANIMATIONS =====
+const revealElements = document.querySelectorAll('.section-title, .timeline-item, .project-card, .cert-card, .contact-card, .comp-card, .test-card');
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            const siblings = entry.target.parentElement.querySelectorAll(
+                entry.target.classList.contains('timeline-item') ? '.timeline-item' :
+                    entry.target.classList.contains('project-card') ? '.project-card' :
+                        entry.target.classList.contains('cert-card') ? '.cert-card' :
+                            entry.target.classList.contains('contact-card') ? '.contact-card' :
+                                entry.target.classList.contains('comp-card') ? '.comp-card' :
+                                    entry.target.classList.contains('test-card') ? '.test-card' :
+                                        '.section-title'
+            );
+            const siblingIndex = Array.from(siblings).indexOf(entry.target);
+            entry.target.style.transitionDelay = `${siblingIndex * 0.08}s`;
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
         }
-
-        sectionContent.classList.toggle('active');
-
-        chevron.classList.toggle('rotate');
     });
+}, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const tooltip = document.querySelector('.tooltip');
-    const tooltipText = tooltip.querySelector('.tooltip-text');
+revealElements.forEach(el => revealObserver.observe(el));
 
-    tooltip.addEventListener('mouseenter', function () {
-        const rect = tooltipText.getBoundingClientRect();
-        const overflowRight = rect.right > window.innerWidth;
-        const overflowLeft = rect.left < 0;
+// ===== INTRO SEQUENCE & SCROLL UNLOCK =====
+const INTRO_EXPAND_MS = 1350;
+const INTRO_DURATION_MS = 2900;
 
-        if (overflowRight) {
-            tooltipText.style.left = 'auto';
-            tooltipText.style.right = '0';
-            tooltipText.style.transform = 'none';
-        } else if (overflowLeft) {
-            tooltipText.style.left = '0';
-            tooltipText.style.right = 'auto';
-            tooltipText.style.transform = 'none';
-        } else {
-            tooltipText.style.left = '50%';
-            tooltipText.style.right = 'auto';
-            tooltipText.style.transform = 'translateX(-50%)';
+setTimeout(() => {
+    const bioCard = document.getElementById('bio-card');
+    if (bioCard) {
+        bioCard.classList.add('bio-expanded');
+    }
+}, INTRO_EXPAND_MS);
+
+function unlockPageContent() {
+    document.body.classList.remove('scroll-locked');
+    const mainSections = document.getElementById('main-sections');
+    if (mainSections) {
+        mainSections.classList.remove('intro-locked');
+    }
+    // Stagger reveal elements that are already within the viewport
+    revealElements.forEach((el, i) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight + 50 && rect.bottom > 0) {
+            setTimeout(() => {
+                el.classList.add('visible');
+                revealObserver.unobserve(el);
+            }, i * 80);
         }
     });
+}
 
-    tooltip.addEventListener('mouseleave', function () {
-        tooltipText.style.left = '50%';
-        tooltipText.style.right = 'auto';
-        tooltipText.style.transform = 'translateX(-50%)';
-    });
-});
+setTimeout(unlockPageContent, INTRO_DURATION_MS);
 
-const sections = document.querySelectorAll('.section-title');
-
-sections.forEach((section, index) => {
-    section.style.setProperty('--index', index);
-    section.style.setProperty('--animation-delay', '0.2s');
-});
-
-// Warning Banner Logic
-const bannerExpirationDate = new Date('2026-01-31T23:59:59');
-const now = new Date();
-
-if (now < bannerExpirationDate) {
-    const banner = document.getElementById('warning-banner');
-    const modal = document.getElementById('banner-modal');
-    const closeBtn = document.querySelector('.close-modal');
-
-    // Ensure elements exist before adding listeners
-    if (banner && modal && closeBtn) {
-        banner.style.display = 'flex';
-
-        banner.addEventListener('click', () => {
-            modal.style.display = 'block';
-        });
-
-        closeBtn.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-
-        window.addEventListener('click', (event) => {
-            if (event.target == modal) {
-                modal.style.display = 'none';
+// ===== COPY EMAIL TO CLIPBOARD =====
+const emailCard = document.getElementById('email-card');
+if (emailCard) {
+    emailCard.addEventListener('click', () => {
+        const email = emailCard.getAttribute('data-email');
+        navigator.clipboard.writeText(email).then(() => {
+            const toast = document.getElementById('copied-toast');
+            if (toast) {
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 2000);
             }
         });
-    }
+    });
 }
+
+// ===== CAROUSEL LOGIC =====
+document.querySelectorAll('[data-carousel]').forEach(carousel => {
+    const track = carousel.querySelector('.carousel-track');
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dotsContainer = carousel.querySelector('.carousel-dots');
+    const prevBtn = carousel.querySelector('.carousel-btn.prev');
+    const nextBtn = carousel.querySelector('.carousel-btn.next');
+    let currentSlide = 0;
+
+    // Create dots
+    slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = `carousel-dot${i === 0 ? ' active' : ''}`;
+        dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    function goToSlide(index) {
+        currentSlide = index;
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        const dots = dotsContainer.querySelectorAll('.carousel-dot');
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentSlide);
+        });
+    }
+
+    prevBtn.addEventListener('click', () => {
+        goToSlide(currentSlide > 0 ? currentSlide - 1 : slides.length - 1);
+    });
+
+    nextBtn.addEventListener('click', () => {
+        goToSlide(currentSlide < slides.length - 1 ? currentSlide + 1 : 0);
+    });
+
+    // Touch/swipe support
+    let startX = 0;
+    let isDragging = false;
+
+    carousel.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+    }, { passive: true });
+
+    carousel.addEventListener('touchend', (e) => {
+        if (!isDragging) return;
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) {
+                goToSlide(currentSlide < slides.length - 1 ? currentSlide + 1 : 0);
+            } else {
+                goToSlide(currentSlide > 0 ? currentSlide - 1 : slides.length - 1);
+            }
+        }
+        isDragging = false;
+    }, { passive: true });
+});

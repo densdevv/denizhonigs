@@ -4,1139 +4,749 @@
 <head>
     <meta charset="UTF-8">
     <title>Deniz Hönigs | CV</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,700,900" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cv-style.css">
-    <link rel="icon" href="/img/favicon-black.png" type="image/x-icon">
-    <link rel="icon" href="/img/favicon-white.png" type="image/x-icon" media="(prefers-color-scheme: dark)">
-    <meta name="keywords"
-        content="hönigs, honigs, deniz honigs, deniz hönigs, dens dev, densdev, dens, saint joseph, student dev">
     <meta name="description" content="I'm Deniz Hönigs — a student, developer, and tech enthusiast.">
-    <script src="https://kit.fontawesome.com/8c71c4d8b8.js" crossorigin="anonymous"></script>
+    <meta name="keywords"
+        content="hönigs, honigs, deniz honigs, deniz hönigs, dens dev, densdev, dens, saint joseph, student dev, epfl">
 
     <meta property="og:title" content="Deniz Hönigs | CV">
     <meta property="og:description" content="I'm Deniz Hönigs — a student, developer, and tech enthusiast.">
-    <meta property="og:image" content="http://denizhonigs.com/img/your-image.jpg">
     <meta property="og:url" content="http://denizhonigs.com">
     <meta property="og:type" content="website">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Deniz Hönigs | CV">
-    <meta name="twitter:description" content="I'm Deniz Hönigs — a student, developer, and tech enthusiast.">
-    <meta name="twitter:image" content="http://denizhonigs.com/img/your-image.jpg">
-    <meta name="twitter:url" content="http://denizhonigs.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="cv-style.css">
+    <link rel="icon" href="/img/favicon-white.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/8c71c4d8b8.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="scroll-locked">
+
+    <!-- Sticky Header -->
+    <header class="sticky-header" id="sticky-header">
+        <span class="header-name">Deniz Hönigs</span>
+        <div class="lang-selector" id="language-selector">
+            <button class="lang-btn active" data-lang="en">
+                <img src="img/gb.svg" alt="EN">
+                <span>English</span>
+            </button>
+            <button class="lang-btn" data-lang="tr">
+                <img src="img/tr.svg" alt="TR">
+                <span>Türkçe</span>
+            </button>
+            <button class="lang-btn" data-lang="fr">
+                <img src="img/fr.svg" alt="FR">
+                <span>Français</span>
+            </button>
+        </div>
+    </header>
+
     <div class="content-wrapper">
-        <div id="greeting-lang">
-            <span id="greeting">
-                <h2 data-translate="greeting"></h2>
-                <h1 data-translate="name"></h1>
-                <h3 data-translate="name_title"></h3>
-                <div class="info-links-container">
-                    <a class="info-link" href="https://www.linkedin.com/in/deniz-h%C3%B6nigs-213261273/"
-                        target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-                    <a class="info-link" href="https://github.com/densdevv" target="_blank"><i
-                            class="fa-brands fa-github"></i> Github</a>
+
+        <!-- ===== BIO CARD ===== -->
+        <section class="bio-card" id="bio-card">
+            <div class="bio-header">
+                <div class="bio-identity">
+                    <div class="bio-greeting" id="bio-greeting">
+                        <span class="wave-hand">👋</span>
+                        <span class="greeting-text" data-translate="intro_greeting"></span>
+                    </div>
+                    <h1 class="bio-name" id="bio-name" data-translate="bio_name"></h1>
+                    <p class="bio-title" id="bio-title" data-translate="bio_title"></p>
                 </div>
-            </span>
+            </div>
+            <p class="bio-text" id="bio-text" data-translate="bio_text"></p>
+            <div class="bio-languages" id="bio-languages">
+                <div class="bio-lang-pill">
+                    <img src="img/tr.svg" alt="TR">
+                    <span class="lang-pill-name" data-translate="turkish"></span>
+                    <span class="lang-pill-level" data-translate="native"></span>
+                </div>
+                <div class="bio-lang-pill">
+                    <img src="img/de.svg" alt="DE">
+                    <span class="lang-pill-name" data-translate="german"></span>
+                    <span class="lang-pill-level" data-translate="native"></span>
+                </div>
+                <div class="bio-lang-pill">
+                    <img src="img/fr.svg" alt="FR">
+                    <span class="lang-pill-name" data-translate="french"></span>
+                    <span class="lang-pill-level">C2</span>
+                </div>
+                <div class="bio-lang-pill">
+                    <img src="img/gb.svg" alt="EN">
+                    <span class="lang-pill-name" data-translate="english"></span>
+                    <span class="lang-pill-level">C1</span>
+                </div>
+                <!--<div class="bio-lang-pill">
+                    <img src="img/latin.jpg" alt="LA">
+                    <span class="lang-pill-name" data-translate="latin"></span>
+                    <span class="lang-pill-level" data-translate="beginner"></span>
+                </div>-->
+                <div class="bio-lang-pill">
+                    <img src="img/it.svg" alt="IT">
+                    <span class="lang-pill-name" data-translate="italian"></span>
+                    <span class="lang-pill-level" data-translate="beginner"></span>
+                </div>
+            </div>
+        </section>
 
-            <div class="radio-inputs" id="language-selector">
-                <label class="radio">
-                    <input type="radio" name="language" value="en" checked>
-                    <span class="radio-lang"><img class="lang-flag" src="../img/gb.svg">English</span>
-                </label>
-                <label class="radio">
-                    <input type="radio" name="language" value="tr">
-                    <span class="radio-lang">
-                        <img class="lang-flag" src="../img/tr.svg">Türkçe</span>
-                </label>
+        <div class="main-sections intro-locked" id="main-sections">
 
-                <label class="radio">
-                    <input type="radio" name="language" value="fr">
-                    <span class="radio-lang"><img class="lang-flag" src="../img/fr.svg">Français</span>
-                </label>
+            <!-- ===== EXPERIENCE ===== -->
+            <h2 class="section-title" id="experience-title">
+                <span class="emoji">🏢</span>
+                <span data-translate="experience"></span>
+            </h2>
+            <div class="timeline" id="experience-timeline">
+                <!-- LauzHack -->
+                <div class="timeline-item current">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <img src="img/lauz.png" alt="LauzHack">
+                            <div class="timeline-card-info">
+                                <h3>LauzHack — <span data-translate="committee_member"></span></h3>
+                                <p class="timeline-date"><span data-translate="current"></span> <span
+                                        data-translate="oct"></span> 2025</p>
+                            </div>
+                        </div>
+                        <p class="timeline-card-desc" data-translate="lauzhack_desc"></p>
+                        <a class="timeline-card-link" href="https://www.lauzhack.com" target="_blank">lauzhack.com</a>
+                    </div>
+                </div>
+
+                <!-- FRC Mentor -->
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <img src="img/conscius.png" alt="Conscius Robotics">
+                            <div class="timeline-card-info">
+                                <h3>Conscius Robotics — <span data-translate="frc_mentor"></span></h3>
+                                <p class="timeline-date"><span data-translate="jan"></span> 2025 – <span
+                                        data-translate="mar"></span> 2026</p>
+                            </div>
+                        </div>
+                        <p class="timeline-card-desc" data-translate="frc_desc"></p>
+                        <a class="timeline-card-link" href="https://www.team10043.org" target="_blank">team10043.org</a>
+                    </div>
+                </div>
+
+                <!-- Dropout Code PM -->
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <img src="img/dropoutcode.svg" alt="Dropout Code">
+                            <div class="timeline-card-info">
+                                <h3>Dropout Code — <span data-translate="cofounder"></span>, <span
+                                        data-translate="project_manager"></span>
+                                </h3>
+                                <p class="timeline-date"><span data-translate="nov"></span> 2022 – <span
+                                        data-translate="jun"></span> 2024</p>
+                            </div>
+                        </div>
+                        <p class="timeline-card-desc" data-translate="dropout_desc_2"></p>
+                        <a class="timeline-card-link" href="https://www.dropoutcode.com"
+                            target="_blank">dropoutcode.com</a>
+                    </div>
+                </div>
+
+                <!-- Dropout Code Game Dev -->
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <img src="img/dropoutcode.svg" alt="Dropout Code">
+                            <div class="timeline-card-info">
+                                <h3>Dropout Code — <span data-translate="cofounder"></span>, <span
+                                        data-translate="gamedev"></span>
+                                </h3>
+                                <p class="timeline-date"><span data-translate="nov"></span> 2020 – <span
+                                        data-translate="nov"></span> 2022</p>
+                            </div>
+                        </div>
+                        <p class="timeline-card-desc" data-translate="dropout_desc_1"></p>
+                        <a class="timeline-card-link" href="https://www.dropoutcode.com"
+                            target="_blank">dropoutcode.com</a>
+                    </div>
+                </div>
+
+                <!-- FMSS -->
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <img src="img/fmss.png" alt="FMSS">
+                            <div class="timeline-card-info">
+                                <h3>FMSS — <span data-translate="intern"></span></h3>
+                                <p class="timeline-date"><span data-translate="jun"></span> 2024</p>
+                            </div>
+                        </div>
+                        <p class="timeline-card-desc" data-translate="fmss_desc"></p>
+                    </div>
+                </div>
+
+                <!-- Fibabanka -->
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <img src="img/fibabanka.png" alt="Fibabanka">
+                            <div class="timeline-card-info">
+                                <h3>Fibabanka —<span data-translate="intern"></span></h3>
+                                <p class="timeline-date"><span data-translate="aug"></span> 2023</p>
+                            </div>
+                        </div>
+                        <p class="timeline-card-desc" data-translate="fibabanka_desc"></p>
+                    </div>
+                </div>
+
+                <!-- Kod-A -->
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <img src="img/koda.png" alt="Kod-A">
+                            <div class="timeline-card-info">
+                                <h3>Kod-A — <span data-translate="intern"></span></h3>
+                                <p class="timeline-date"><span data-translate="aug"></span> 2021</p>
+                            </div>
+                        </div>
+                        <p class="timeline-card-desc" data-translate="koda_desc"></p>
+                    </div>
+                </div>
             </div>
 
-        </div>
-        <h2 class="section-title" data-target="experience-container">
-            <span class='chevron'>❯</span>
-            <span data-translate="experience"></span>
-        </h2>
-        <div class="cards-container" id="experience-container">
-            <div class="cards-container-inner">
-                <div class="experience-card">
-                    <div class="experience-card-primary">
-                        <img src="../img/lauz.png" alt="LauzHack Logo">
-                        <span class="experience-info">
-                            <h3><span data-translate="committee_member"></span></h3>
-                            <p><span data-translate="current"></span> <span data-translate="oct"></span> 2025</p>
-                        </span>
-                    </div>
-                    <div class="student-card-secondary">
-                        <p class="experience-desc" data-translate="lauzhack_desc">
-                        </p>
-                        <a class="view-certificate center-override" href="https://www.lauzhack.com" target="_blank"><img
-                                src="../img/link.svg" alt="">lauzhack.com</a>
-                    </div>
-                </div>
-                <div class="experience-card">
-                    <div class="experience-card-primary">
-                        <img src="../img/conscius.png" alt="Conscius Robotics Logo">
-                        <span class="experience-info">
-                            <h3><span data-translate="frc_mentor"></span></h3>
-                            <p><span data-translate="jan"></span> 2025 - <span data-translate="mar"></span> 2026</p>
-                        </span>
-
-                    </div>
-                    <div class="student-card-secondary">
-                        <p class="student-desc" data-translate="frc_desc">
-                        </p>
-                        <a class="view-certificate center-override" href="https://www.team10043.org"
-                            target="_blank"><img src="../img/link.svg" alt="">team10043.org</a>
+            <!-- ===== EDUCATION ===== -->
+            <h2 class="section-title" id="education-title">
+                <span class="emoji">🎓</span>
+                <span data-translate="education"></span>
+            </h2>
+            <div class="timeline" id="education-timeline">
+                <!-- EPFL CS -->
+                <div class="timeline-item current">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <img src="img/epfl.svg" alt="EPFL">
+                            <div class="timeline-card-info">
+                                <h3>EPFL — <span data-translate="informatique"></span></h3>
+                                <p class="timeline-date">2026 – <span data-translate="current_label"></span></p>
+                            </div>
+                        </div>
+                        <p class="timeline-card-desc" data-translate="epfl_cs_desc"></p>
+                        <a class="timeline-card-link"
+                            href="https://www.epfl.ch/education/bachelor/programs/computer-science/"
+                            target="_blank"><span data-translate="visit_site"></span></a>
                     </div>
                 </div>
 
-                <div class="experience-card">
-                    <div class="experience-card-primary">
-                        <img src="../img/dropoutcode.png" alt="Dropout Code Logo">
-                        <span class="experience-info">
-                            <h3><span data-translate="cofounder"></span>, <span data-translate="project_manager"></span>
-                            </h3>
-                            <p><span data-translate="nov"></span> 2022 - <span data-translate="jun"></span> 2024</p>
-                        </span>
-                    </div>
-                    <div class="experience-card-secondary">
-                        <p class="experience-desc" data-translate="dropout_desc_2">
-                        </p>
-                    </div>
-                </div>
-                <div class="experience-card">
-                    <div class="experience-card-primary">
-                        <img src="../img/dropoutcode.png" alt="Dropout Code Logo">
-                        <span class="experience-info">
-                            <h3><span data-translate="cofounder"></span>, <span data-translate="gamedev"></span></h3>
-                            <p><span data-translate="nov"></span> 2020 - <span data-translate="nov"></span> 2022</p>
-                        </span>
-                    </div>
-                    <div class="experience-card-secondary">
-                        <p class="experience-desc" data-translate="dropout_desc_1">
-                        </p>
+                <!-- EPFL CMS -->
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <img src="img/epfl.svg" alt="EPFL">
+                            <div class="timeline-card-info">
+                                <h3>EPFL — CMS</h3>
+                                <p class="timeline-date">2025 – 2026</p>
+                            </div>
+                        </div>
+                        <p class="timeline-card-desc" data-translate="cms_desc"></p>
+                        <a class="timeline-card-link" href="https://www.epfl.ch/education/cms-preparatory-year/"
+                            target="_blank"><span data-translate="visit_site"></span></a>
                     </div>
                 </div>
 
-
-                <div class="experience-card-filler"></div>
-                <div class="experience-card-filler"></div>
-            </div>
-
-            <div class="cards-container-inner">
-                <div class="internship-card">
-                    <div class="internship-card-primary">
-                        <img src="../img/fmss.png" alt="FMSS Logo">
-                        <span class="internship-info">
-                            <h3 data-translate="intern"></h3>
-                            <p><span data-translate="jun"></span> 2024</p>
-                        </span>
-
-                    </div>
-                    <div class="experience-card-secondary">
-                        <p class="internship-desc" data-translate="fmss_desc">
-                        </p>
-                    </div>
-                </div>
-
-                <div class="internship-card">
-                    <div class="internship-card-primary">
-                        <img src="../img/fibabanka.png" alt="Fibabanka Logo">
-                        <span class="internship-info">
-                            <h3 data-translate="intern"></h3>
-                            <p><span data-translate="aug"></span> 2023</p>
-                        </span>
-
-                    </div>
-                    <div class="experience-card-secondary">
-                        <p class="internship-desc" data-translate="fibabanka_desc">
-                        </p>
-                    </div>
-                </div>
-
-                <div class="internship-card">
-                    <div class="internship-card-primary">
-                        <img src="../img/koda.png" alt="Kod-A Logo">
-                        <span class="internship-info">
-                            <h3 data-translate="intern"></h3>
-                            <p><span data-translate="aug"></span> 2021</p>
-                        </span>
-
-                    </div>
-                    <div class="experience-card-secondary">
-                        <p class="internship-desc" data-translate="koda_desc">
-                        </p>
-                    </div>
-                </div>
-
-                <div class="internship-card-filler"></div>
-                <div class="internship-card-filler"></div>
-
-            </div>
-        </div>
-
-        <hr>
-
-        <h2 class="section-title" data-target="education-container">
-            <span class='chevron'>❯</span>
-            <span data-translate="education"></span>
-        </h2>
-        <div class="cards-container" id="education-container">
-            <div class="cards-container-inner">
-                <div class="school-card">
-                    <div class="school-card-primary">
-                        <span class="school-info">
-                            <p class="education-type"><span data-translate="cms"></span>&nbsp;• 2025-</p>
-                            <h3 class="education-name">EPFL - CMS</h3>
-                        </span>
-                        <img src="../img/epfl.svg" alt="EPFL Logo">
-                    </div>
-                    <div class="student-card-secondary">
-                        <p class="student-desc" data-translate="cms_desc">
-                        </p>
-                        <a class="view-certificate" href="https://www.epfl.ch/education/cms-preparatory-year/"
-                            target="_blank"><img src="../img/link.svg" alt=""><span
+                <!-- Saint-Joseph -->
+                <div class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <img src="img/sj.png" alt="Saint-Joseph">
+                            <div class="timeline-card-info">
+                                <h3 data-translate="saint_joseph"></h3>
+                                <p class="timeline-date">2020 – 2025</p>
+                            </div>
+                        </div>
+                        <p class="timeline-card-desc" data-translate="sj_desc"></p>
+                        <a class="timeline-card-link" href="https://sj.k12.tr" target="_blank"><span
                                 data-translate="visit_site"></span></a>
                     </div>
-
                 </div>
-                <div class="school-card">
-                    <div class="school-card-primary">
-                        <span class="school-info">
-                            <p class="education-type"><span data-translate="high_school"></span>&nbsp;• 2020-2025</p>
-                            <h3 class="education-name" data-translate="saint_joseph"></h3>
-                        </span>
-                        <img src="../img/sj.png" alt="Saint-Joseph Logo">
-                    </div>
-                    <div class="student-card-secondary">
-                        <p class="student-desc" data-translate="sj_desc">
-                        </p>
-                        <a class="view-certificate" href="https://sj.k12.tr" target="_blank"><img src="../img/link.svg"
-                                alt=""><span data-translate="visit_site"></span></a>
-                    </div>
-
-                </div>
-                <!--<div class="school-card">
-                    <div class="school-card-primary">
-                        <span class="school-info">
-                            <p class="education-type"><span data-translate="primary_school"></span>&nbsp;• 2012-2020</p>
-                            <h3 class="education-name" data-translate="bilfen"></h3>
-                        </span>
-                        <img src="../img/bilfen.png" alt="Bilfen Logo">
-                    </div>
-                    <a class="view-certificate" href="https://bilfen.com" target="_blank"><img src="../img/link.svg"
-                            alt=""><span data-translate="visit_site"></span></a>
-                </div>-->
-                <div class="school-card-filler"></div>
             </div>
 
-            <div class="cards-container-inner">
-                <div class="course-card">
-                    <div class="course-card-primary">
-                        <span class="course-info">
-                            <p class="education-type">Bilgeİş • 2025</p>
-                            <h3 class="education-name" data-translate="webdev"></h3>
-                        </span>
-                        <img src="../img/bilgeis.png" alt="Türkiye - EU">
+            <!-- Certifications sub-grid -->
+            <h2 class="section-title" id="certs-title">
+                <span class="emoji">📜</span>
+                <span data-translate="certifications"></span>
+            </h2>
+            <div class="certs-grid" id="certs-grid">
+                <a class="cert-card" href="/certs/code/bilgeis_web.pdf" target="_blank">
+                    <img src="img/bilgeis.png" alt="BilgeİŞ">
+                    <div class="cert-card-info">
+                        <h4 data-translate="webdev"></h4>
+                        <p>BilgeİŞ • 2025</p>
                     </div>
-                    <a class="view-certificate" href="/certs/code/bilgeis_web.pdf" target="_blank"><img
-                            src="../img/certificate.svg"><span data-translate="view_certificate"></span></a>
-                </div>
-                <div class="course-card">
-                    <div class="course-card-primary">
-                        <span class="course-info">
-                            <p class="education-type">Bilgeİş • 2025</p>
-                            <h3 class="education-name" data-translate="cloud"></h3>
-                        </span>
-                        <img src="../img/bilgeis.png" alt="Türkiye - EU">
+                </a>
+                <a class="cert-card" href="/certs/code/bilgeis_bulut.pdf" target="_blank">
+                    <img src="img/bilgeis.png" alt="BilgeİŞ">
+                    <div class="cert-card-info">
+                        <h4 data-translate="cloud"></h4>
+                        <p>BilgeİŞ • 2025</p>
                     </div>
-                    <a class="view-certificate" href="/certs/code/bilgeis_bulut.pdf" target="_blank"><img
-                            src="../img/certificate.svg"><span data-translate="view_certificate"></span></a>
-                </div>
-                <div class="course-card">
-                    <div class="course-card-primary">
-                        <span class="course-info">
-                            <p class="education-type">Udemy • 2024</p>
-                            <h3 class="education-name"><span data-translate="webdev"></span></h3>
-                        </span>
-                        <img src="../img/udemy.png" alt="Udemy Logo">
+                </a>
+                <a class="cert-card" href="/certs/code/udemy_web.pdf" target="_blank">
+                    <img src="img/udemy.png" alt="Udemy">
+                    <div class="cert-card-info">
+                        <h4 data-translate="webdev"></h4>
+                        <p>Udemy • 2024</p>
                     </div>
-                    <a class="view-certificate" href="/certs/code/udemy_web.pdf" target="_blank"><img
-                            src="../img/certificate.svg"><span data-translate="view_certificate"></span></a>
-                </div>
-                <div class="course-card">
-                    <div class="course-card-primary">
-                        <span class="course-info">
-                            <p class="education-type">Great Learning • 2024</p>
-                            <h3 class="education-name">Github</h3>
-                        </span>
-                        <img src="../img/greatlearning.png" alt="Great Learning Logo">
-
+                </a>
+                <a class="cert-card" href="/certs/code/greatlearning_github.pdf" target="_blank">
+                    <img src="img/greatlearning.png" alt="Great Learning">
+                    <div class="cert-card-info">
+                        <h4>GitHub</h4>
+                        <p>Great Learning • 2024</p>
                     </div>
-                    <a class="view-certificate" href="/certs/code/greatlearning_github.pdf" target="_blank"><img
-                            src="../img/certificate.svg"><span data-translate="view_certificate"></span></a>
-                </div>
-                <div class="course-card">
-                    <div class="course-card-primary">
-                        <span class="course-info">
-                            <p class="education-type">HackerRank • 2024</p>
-                            <h3 class="education-name">CSS</h3>
-                        </span>
-                        <img src="../img/hackerrank.png" alt="HackerRank Logo">
+                </a>
+                <a class="cert-card" href="/certs/code/hackerrank_css.pdf" target="_blank">
+                    <img src="img/hackerrank.png" alt="HackerRank">
+                    <div class="cert-card-info">
+                        <h4>CSS</h4>
+                        <p>HackerRank • 2024</p>
                     </div>
-                    <a class="view-certificate" href="/certs/code/hackerrank_css.pdf" target="_blank"><img
-                            src="../img/certificate.svg"><span data-translate="view_certificate"></span></a>
-                </div>
-                <div class="course-card">
-                    <div class="course-card-primary">
-                        <span class="course-info">
-                            <p class="education-type">Unity Engine • 2020-2022</p>
-                            <h3 class="education-name">Kodlama Atölyesi</h3>
-                        </span>
-                        <img src="../img/kodlama.png" alt="Kodlama Atölyesi Logo">
+                </a>
+                <a class="cert-card" href="https://kodlamaatolyesi.com" target="_blank">
+                    <img src="img/kodlama.png" alt="Kodlama Atölyesi">
+                    <div class="cert-card-info">
+                        <h4>Kodlama Atölyesi</h4>
+                        <p>Unity • 2020-2022</p>
                     </div>
-                    <a class="view-certificate" href="https://kodlamaatolyesi.com" target="_blank"><img
-                            src="../img/link.svg" alt=""><span data-translate="visit_site"></span></a>
-
-                </div>
-                <div class="course-card">
-                    <div class="course-card-primary">
-                        <span class="course-info">
-                            <p class="education-type">Bilgeİş • 2019</p>
-                            <h3 class="education-name">Python - 1</h3>
-                        </span>
-                        <img src="../img/bilgeis.png" alt="Türkiye - EU">
+                </a>
+                <a class="cert-card" href="/certs/code/bilgeis_python1.pdf" target="_blank">
+                    <img src="img/bilgeis.png" alt="BilgeİŞ">
+                    <div class="cert-card-info">
+                        <h4>Python 1</h4>
+                        <p>BilgeİŞ • 2019</p>
                     </div>
-                    <a class="view-certificate" href="/certs/code/bilgeis_python1.pdf" target="_blank"><img
-                            src="../img/certificate.svg"><span data-translate="view_certificate"></span></a>
-                </div>
-                <div class="course-card">
-                    <div class="course-card-primary">
-                        <span class="course-info">
-                            <p class="education-type">Bilgeİş • 2019</p>
-                            <h3 class="education-name">Python - 2</h3>
-                        </span>
-                        <img src="../img/bilgeis.png" alt="Türiye - EU">
+                </a>
+                <a class="cert-card" href="/certs/code/bilgeis_python2.pdf" target="_blank">
+                    <img src="img/bilgeis.png" alt="BilgeİŞ">
+                    <div class="cert-card-info">
+                        <h4>Python 2</h4>
+                        <p>BilgeİŞ • 2019</p>
                     </div>
-                    <a class="view-certificate" href="/certs/code/bilgeis_python2.pdf" target="_blank"><img
-                            src="../img/certificate.svg"><span data-translate="view_certificate"></span></a>
-                </div>
-                <div class="course-card-filler"></div>
-                <div class="course-card-filler"></div>
+                </a>
             </div>
-        </div>
 
-        <hr>
-
-        <h2 class="section-title" data-target="projects-container">
-            <span class='chevron'>❯</span>
-            <span data-translate="projects"></span>
-        </h2>
-        <div class="cards-container" id="projects-container">
-            <div class="student-card">
-                <div class="student-card-primary">
-                    <img src="../img/swissai.png" alt="Swiss Weather Intelligence System Logo">
-                    <span class="student-info">
+            <!-- ===== PROJECTS ===== -->
+            <h2 class="section-title" id="projects-title">
+                <span class="emoji">🛠️</span>
+                <span data-translate="projects"></span>
+            </h2>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Swiss AI -->
+                <div class="project-card">
+                    <div class="project-carousel" data-carousel>
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="img/swiss0.png" alt="SwissAI Screenshot 1"></div>
+                            <div class="carousel-slide"><img src="img/swiss1.png" alt="SwissAI Screenshot 2"></div>
+                            <div class="carousel-slide"><img src="img/swiss2.png" alt="SwissAI Screenshot 3"></div>
+                            <div class="carousel-slide"><img src="img/swiss3.png" alt="SwissAI Screenshot 4"></div>
+                        </div>
+                        <button class="carousel-btn prev" aria-label="Previous">❮</button>
+                        <button class="carousel-btn next" aria-label="Next">❯</button>
+                        <div class="carousel-dots"></div>
+                    </div>
+                    <div class="project-body">
                         <h3 data-translate="swissai"></h3>
-                        <p data-translate="ai_app"></p>
-                    </span>
+                        <p data-translate="swissai_desc"></p>
+                        <div class="project-tags">
+                            <span class="project-tag" data-translate="ai_app"></span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Streamlit</span>
+                        </div>
+                        <a class="project-link" href="https://bias-and-variance.streamlit.app/" target="_blank"><span
+                                data-translate="visit_site"></span></a>
+                    </div>
+                </div>
 
-                </div>
-                <div class="student-card-secondary">
-                    <p class="student-desc" data-translate="swissai_desc">
-                    </p>
-                    <a class="view-certificate center-override" href="https://bias-and-variance.streamlit.app/"
-                        target="_blank"><img src="../img/link.svg" alt=""><span data-translate="visit_site"></span></a>
-                </div>
-            </div>
-            <div class="student-card">
-                <div class="student-card-primary">
-                    <img src="../img/casus.png" alt="Spy Game Icon">
-                    <span class="student-info">
+                <!-- Casus Kim -->
+                <div class="project-card">
+                    <div class="project-carousel" data-carousel>
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="img/casus0.png" alt="Casus Kim Screenshot 1"></div>
+                            <div class="carousel-slide"><img src="img/casus1.png" alt="Casus Kim Screenshot 2"></div>
+                            <div class="carousel-slide"><img src="img/casus2.png" alt="Casus Kim Screenshot 3"></div>
+                        </div>
+                        <button class="carousel-btn prev" aria-label="Previous">❮</button>
+                        <button class="carousel-btn next" aria-label="Next">❯</button>
+                        <div class="carousel-dots"></div>
+                    </div>
+                    <div class="project-body">
                         <h3 data-translate="casus"></h3>
-                        <p data-translate="web_game"></p>
-                    </span>
+                        <p data-translate="casus_desc"></p>
+                        <div class="project-tags">
+                            <span class="project-tag" data-translate="web_game"></span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">HTML/CSS</span>
+                        </div>
+                        <a class="project-link" href="https://casuskim.net" target="_blank">casuskim.net</a>
+                    </div>
+                </div>
 
-                </div>
-                <div class="student-card-secondary">
-                    <p class="student-desc" data-translate="casus_desc">
-                    </p>
-                    <a class="view-certificate center-override" href="https://casuskim.net" target="_blank"><img
-                            src="../img/link.svg" alt=""><span data-translate="visit_site"></span></a>
-                </div>
-            </div>
-            <div class="student-card">
-                <div class="student-card-primary">
-                    <img src="../img/favicon-black.png" alt="dens.dev Icon">
-                    <span class="student-info">
+                <!-- dens.dev -->
+                <div class="project-card">
+                    <div class="project-carousel" data-carousel>
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="img/dens0.png" alt="dens.dev Screenshot 1">
+                            </div>
+                            <div class="carousel-slide"><img src="img/dens1.png" alt="dens.dev Screenshot 2">
+                            </div>
+                            <div class="carousel-slide"><img src="img/dens2.png" alt="dens.dev Screenshot 3">
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev" aria-label="Previous">❮</button>
+                        <button class="carousel-btn next" aria-label="Next">❯</button>
+                        <div class="carousel-dots"></div>
+                    </div>
+                    <div class="project-body">
                         <h3>dens.dev</h3>
-                        <p data-translate="web_games"></p>
-                    </span>
-
+                        <p data-translate="dens_desc"></p>
+                        <div class="project-tags">
+                            <span class="project-tag" data-translate="web_games"></span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">HTML/CSS</span>
+                        </div>
+                        <a class="project-link" href="https://dens.dev" target="_blank">dens.dev</a>
+                    </div>
                 </div>
-                <div class="student-card-secondary">
-                    <p class="student-desc" data-translate="dens_desc">
-                    </p>
-                    <a class="view-certificate center-override" href="https://dens.dev" target="_blank"><img
-                            src="../img/link.svg" alt=""><span data-translate="visit_site"></span></a>
-                </div>
-            </div>
 
-            <div class="student-card">
-                <div class="student-card-primary">
-                    <img src="../img/sj-modern.png" alt="Saint-Joseph Logo">
-                    <span class="student-info">
+                <!-- Metaclass -->
+                <div class="project-card">
+                    <div class="project-carousel" data-carousel>
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="img/metaclass0.png" alt="Metaclass Screenshot 1">
+                            </div>
+                            <div class="carousel-slide"><img src="img/metaclass1.png" alt="Metaclass Screenshot 2">
+                            </div>
+                            <div class="carousel-slide"><img src="img/metaclass2.png" alt="Metaclass Screenshot 3">
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev" aria-label="Previous">❮</button>
+                        <button class="carousel-btn next" aria-label="Next">❯</button>
+                        <div class="carousel-dots"></div>
+                    </div>
+                    <div class="project-body">
                         <h3>Metaclass</h3>
-                        <p data-translate="digital_education"></p>
-                    </span>
-
+                        <p data-translate="metaclass_desc"></p>
+                        <div class="project-tags">
+                            <span class="project-tag" data-translate="digital_education"></span>
+                            <span class="project-tag">Web App</span>
+                        </div>
+                        <a class="project-link" href="https://metaclass.dens.dev" target="_blank">metaclass.dens.dev</a>
+                    </div>
                 </div>
-                <div class="student-card-secondary">
-                    <p class="student-desc" data-translate="metaclass_desc">
-                    </p>
-                    <a class="view-certificate center-override" href="https://metaclass.dens.dev" target="_blank"><img
-                            src="../img/link.svg" alt=""><span data-translate="visit_site"></span></a>
+
+                <!-- Mavi Dokunuş
+            <div class="project-card">
+                <div class="project-carousel" data-carousel>
+                    <div class="carousel-track">
+                        <div class="carousel-slide"><img src="img/disabled.svg" alt="Mavi Dokunuş Screenshot 1"></div>
+                        <div class="carousel-slide"><img src="img/disabled.svg" alt="Mavi Dokunuş Screenshot 2"></div>
+                    </div>
+                    <button class="carousel-btn prev" aria-label="Previous">❮</button>
+                    <button class="carousel-btn next" aria-label="Next">❯</button>
+                    <div class="carousel-dots"></div>
+                </div>
+                <div class="project-body">
+                    <h3>Mavi Dokunuş</h3>
+                    <p data-translate="mavidokunus_desc"></p>
+                    <div class="project-tags">
+                        <span class="project-tag" data-translate="stem"></span>
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">ML</span>
+                    </div>
+                    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                        <a class="project-link" href="/certs/comp/md_samsung.pdf" target="_blank">Geleceğin
+                            Mucitleri</a> <br />
+                        <a class="project-link" href="/certs/comp/md_tubitak.pdf" target="_blank">TÜBİTAK</a>
+                    </div>
+                </div>
+            </div> -->
+            </div>
+
+            <!-- ===== COMPETITIONS ===== 
+        <h2 class="section-title" id="competitions-title">
+            <span class="emoji">🏅</span>
+            <span data-translate="competitions"></span>
+        </h2>
+        <div class="competitions-grid" id="competitions-grid">
+            <div class="comp-card">
+                <h3 data-translate="math_comp"></h3>
+                <div class="comp-group">
+                    <h4 data-translate="kangourou"></h4>
+                    <div class="comp-entry">
+                        <div class="comp-entry-header">
+                            <span class="comp-year">2025</span>
+                            <span class="comp-level"><span data-translate="terminale"></span> <span
+                                    data-translate="spe_maths"></span></span>
+                        </div>
+                        <div class="comp-result">
+                            <span class="comp-rank"><i class="fa-solid fa-ranking-star"></i> 0.57%</span>
+                            <span class="comp-percentile">#18 / 3121</span>
+                            <a class="comp-cert-link" href="/certs/comp/kangourou_2025.pdf" target="_blank"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> <span
+                                    data-translate="view"></span></a>
+                        </div>
+                    </div>
+                    <div class="comp-entry">
+                        <div class="comp-entry-header">
+                            <span class="comp-year">2024</span>
+                            <span class="comp-level"><span data-translate="premiere"></span> <span
+                                    data-translate="spe_maths"></span></span>
+                        </div>
+                        <div class="comp-result">
+                            <span class="comp-rank"><i class="fa-solid fa-ranking-star"></i> 0.99%</span>
+                            <span class="comp-percentile">#39 / 3901</span>
+                            <a class="comp-cert-link" href="/certs/comp/kangourou_2024.pdf" target="_blank"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> <span
+                                    data-translate="view"></span></a>
+                        </div>
+                    </div>
+                    <div class="comp-entry">
+                        <div class="comp-entry-header">
+                            <span class="comp-year">2023</span>
+                            <span class="comp-level" data-translate="seconde"></span>
+                        </div>
+                        <div class="comp-result">
+                            <span class="comp-rank"><i class="fa-solid fa-ranking-star"></i> 0.08%</span>
+                            <span class="comp-percentile">#9 / 11459</span>
+                            <a class="comp-cert-link" href="/certs/comp/kangourou_2023.pdf" target="_blank"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> <span
+                                    data-translate="view"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="comp-group">
+                    <h4 data-translate="waterloo"></h4>
+                    <div class="comp-entry">
+                        <div class="comp-entry-header">
+                            <span class="comp-year">2024</span>
+                        </div>
+                        <div class="comp-result">
+                            <span class="comp-rank"><span data-translate="grade_champion"></span> & <span
+                                    data-translate="intl_honor_roll"></span></span>
+                            <a class="comp-cert-link" href="/certs/comp/fermat_2024.pdf" target="_blank"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> <span
+                                    data-translate="view"></span></a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="student-card">
-                <div class="student-card-primary">
-                    <img src="../img/disabled.svg" alt="Disabled Icon">
-                    <span class="student-info">
-                        <h3>Mavi Dokunuş</h3>
-                        <p data-translate="stem"></p>
-                    </span>
-
+            <div class="comp-card">
+                <h3 data-translate="compsci_comp"></h3>
+                <div class="comp-group">
+                    <h4 data-translate="hackathons"></h4>
+                    <div class="comp-entry">
+                        <div class="comp-entry-header">
+                            <span class="comp-year">2025</span>
+                            <span class="comp-level">Swiss {ai} Weeks Lausanne</span>
+                        </div>
+                        <div class="comp-result">
+                            <span class="comp-rank"><i class="fa-solid fa-ranking-star"></i> <span
+                                    data-translate="organizers_prize"></span></span>
+                            <a class="comp-cert-link"
+                                href="https://devpost.com/software/swiss-weather-intelligence-system" target="_blank"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> <span
+                                    data-translate="view"></span></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="student-card-secondary">
-                    <p class="student-desc" data-translate="mavidokunus_desc">
-                    </p>
-                    <a class="view-certificate center-override" href="/certs/comp/md_samsung.pdf" target="_blank"><img
-                            src="../img/certificate.svg" alt=""><span
-                            data-translate="view_certificate"></span>&nbsp;(Geleceğin Mucitleri)</a>
-                    <a class="view-certificate center-override" href="/certs/comp/md_tubitak.pdf" target="_blank"><img
-                            src="../img/certificate.svg" alt=""><span
-                            data-translate="view_certificate"></span>&nbsp;(TÜBİTAK)</a>
+                <div class="comp-group">
+                    <h4 data-translate="castor"></h4>
+                    <div class="comp-entry">
+                        <div class="comp-entry-header">
+                            <span class="comp-year">2023</span>
+                            <span class="comp-level"><span data-translate="premiere"></span> <span
+                                    data-translate="individuel"></span></span>
+                        </div>
+                        <div class="comp-result">
+                            <span class="comp-rank"><i class="fa-solid fa-ranking-star"></i> 2.1%</span>
+                            <span class="comp-percentile">#231 / 10824</span>
+                            <a class="comp-cert-link" href="/certs/comp/castor_2023.pdf" target="_blank"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> <span
+                                    data-translate="view"></span></a>
+                        </div>
+                    </div>
+                    <div class="comp-entry">
+                        <div class="comp-entry-header">
+                            <span class="comp-year">2022</span>
+                            <span class="comp-level"><span data-translate="seconde"></span> <span
+                                    data-translate="individuel"></span></span>
+                        </div>
+                        <div class="comp-result">
+                            <span class="comp-rank"><i class="fa-solid fa-ranking-star"></i> 0.3%</span>
+                            <span class="comp-percentile">#125 / 44757</span>
+                            <a class="comp-cert-link" href="/certs/comp/castor_2022.pdf" target="_blank"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> <span
+                                    data-translate="view"></span></a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="student-card-filler"></div>
-            <div class="student-card-filler"></div>
-            <div class="student-card-filler"></div>
+            <div class="comp-card">
+                <h3 data-translate="stem_comp"></h3>
+                <div class="comp-group">
+                    <h4>First Robotics Competition</h4>
+                    <div class="comp-entry">
+                        <div class="comp-entry-header">
+                            <span class="comp-year">2025</span>
+                            <span class="comp-level">Marmara Regional</span>
+                        </div>
+                        <div class="comp-result">
+                            <span class="comp-rank">Finalist Award</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="comp-group">
+                    <h4 data-translate="cs"></h4>
+                    <div class="comp-entry">
+                        <div class="comp-entry-header">
+                            <span class="comp-year">2024</span>
+                            <span class="comp-level" data-translate="grade_11"></span>
+                        </div>
+                        <div class="comp-result">
+                            <span class="comp-rank" data-translate="silver"></span>
+                            <a class="comp-cert-link" href="/certs/comp/concours_2024.pdf" target="_blank"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> <span
+                                    data-translate="view"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <hr>
-
-        <h2 class="section-title" data-target="competitions-container">
-            <span class="chevron">❯</span><span data-translate="competitions"></span>
+        <h2 class="section-title" id="tests-title">
+            <span class="emoji">📊</span>
+            <span data-translate="test_results"></span>
         </h2>
-        <div class="cards-container" id="competitions-container">
-            <div class="competition-card">
-                <div class="competition-card-primary">
-                    <span class="competition-info">
-                        <h3><span data-translate="math_comp"></span></h3>
-                    </span>
-                </div>
-                <div class="competition-card-secondary">
-                    <div class="competition-group">
-                        <h4 class="competition-name" data-translate="kangourou">Kangourou</h4>
-                        <span class="competition-item">
-                            <p class="comp-line"><span class="competition-year">2025</span> — <span data-translate="terminale"></span> <span data-translate="spe_maths"></span>
-                            </p>
-                            <p class="comp-line"><b><i class="fa-solid fa-ranking-star"></i> 0.57%</b> • <b>#18</b>/3121
-                                <a class="view-competition-certificate" href="/certs/comp/kangourou_2025.pdf"
-                                    target="_blank"><img src="../img/certificate.svg"><span
-                                        data-translate="view"></span></a></p>
-                        </span>
-                        <span class="competition-item">
-                            <p class="comp-line"><span class="competition-year">2024</span> — <span data-translate="premiere"></span> <span data-translate="spe_maths"></span></p>
-                            <p class="comp-line"><b><i class="fa-solid fa-ranking-star"></i> 0.99%</b> • <b>#39</b>/3901
-                                <a class="view-competition-certificate" href="/certs/comp/kangourou_2024.pdf"
-                                    target="_blank"><img src="../img/certificate.svg"><span
-                                        data-translate="view"></span></a></p>
-                        </span>
-                        <span class="competition-item">
-                            <p class="comp-line"><span class="competition-year">2023</span> — <span data-translate="seconde"></span></span></p>
-                            <p class="comp-line"><b><i class="fa-solid fa-ranking-star"></i> 0.08%</b> • <b>#9</b>/11459
-                                <a class="view-competition-certificate" href="/certs/comp/kangourou_2023.pdf"
-                                    target="_blank"><img src="../img/certificate.svg"><span
-                                        data-translate="view"></span></a></p>
-                        </span>
+        <div class="tests-grid" id="tests-grid">
+            <div class="test-card">
+                <div class="test-card-header">
+                    <div>
+                        <h3 data-translate="gpa"></h3>
+                        <p class="test-date" data-translate="gpa_desc"></p>
                     </div>
-
-                    <div class="competition-group">
-                        <h4 class="competition-name" data-translate="waterloo">Waterloo / Fermat</h4>
-                        <span class="competition-item">
-                            <p class="comp-line"><span class="competition-year">2024</span></p>
-                            <p class="comp-line"><b><span data-translate="grade_champion"></span> & <span
-                                        data-translate="intl_honor_roll"></span></b> <a
-                                    class="view-competition-certificate" href="/certs/comp/fermat_2024.pdf"
-                                    target="_blank"><img src="../img/certificate.svg"><span
-                                        data-translate="view"></span></a></p>
-                        </span>
+                    <span class="test-score">98.86<span> /100</span></span>
+                </div>
+                <div class="test-badge">🥈 <span data-translate="second_place"></span></div>
+                <div class="test-subscores">
+                    <div class="test-subscore">
+                        <span class="sub-label" data-translate="grade_9"></span>
+                        <span class="sub-value">98.28 <span>/100</span></span>
+                    </div>
+                    <div class="test-subscore">
+                        <span class="sub-label" data-translate="grade_10"></span>
+                        <span class="sub-value">98.65 <span>/100</span></span>
+                    </div>
+                    <div class="test-subscore">
+                        <span class="sub-label" data-translate="grade_11"></span>
+                        <span class="sub-value">98.91 <span>/100</span></span>
+                    </div>
+                    <div class="test-subscore">
+                        <span class="sub-label" data-translate="grade_12"></span>
+                        <span class="sub-value">99.58 <span>/100</span></span>
                     </div>
                 </div>
             </div>
 
-            <div class="competition-card">
-                <div class="competition-card-primary">
-                    <span class="competition-info">
-                        <h3><span data-translate="compsci_comp"></span></h3>
-
-                    </span>
-                </div>
-                <div class="competition-card-secondary">
-                    <div class="competition-group">
-                        <h4 class="competition-name" data-translate="hackathons">Hackathons</h4>
-                        <span class="competition-item">
-                            <p class="comp-line"><span class="competition-year">2025</span> — Swiss {ai} Weeks Lausanne
-                            </p>
-                            <p class="comp-line"><b><i class="fa-solid fa-ranking-star"></i> <span
-                                        data-translate="organizers_prize"></span></b> <a
-                                    class="view-competition-certificate"
-                                    href="https://devpost.com/software/swiss-weather-intelligence-system"
-                                    target="_blank"><img src="../img/link.svg"><span data-translate="view"></span></a>
-                            </p>
-                        </span>
+            <div class="test-card">
+                <div class="test-card-header">
+                    <div>
+                        <h3>DALF C2</h3>
+                        <p class="test-date"><span data-translate="jun"></span> 2024</p>
                     </div>
-                    <div class="competition-group">
-                        <h4 class="competition-name" data-translate="castor">Castor Informatique</h4>
-                        <span class="competition-item">
-                            <p class="comp-line"><span class="competition-year">2023</span> — <span data-translate="premiere"></span> <span data-translate="individuel"></span></p>
-                            <p class="comp-line"><b><i class="fa-solid fa-ranking-star"></i> 2.1%</b> •
-                                <b>#231</b>/10824 <a class="view-competition-certificate"
-                                    href="/certs/comp/castor_2023.pdf" target="_blank"><img
-                                        src="../img/certificate.svg"><span data-translate="view"></span></a></p>
-                        </span>
-                        <span class="competition-item">
-                            <p class="comp-line"><span class="competition-year">2022</span> — <span data-translate="seconde"></span> <span data-translate="individuel"></span></p>
-                            <p class="comp-line"><b><i class="fa-solid fa-ranking-star"></i> 0.3%</b> •
-                                <b>#125</b>/44757 <a class="view-competition-certificate"
-                                    href="/certs/comp/castor_2022.pdf" target="_blank"><img
-                                        src="../img/certificate.svg"><span data-translate="view"></span></a></p>
-                        </span>
-                    </div>
-
-                    <!--<div class="competition-group">
-                        <h4 class="competition-name" data-translate="coder"></h4>
-                        <span class="competition-item">
-                            <p class="comp-line"><span class="competition-year">2022</span> — <span
-                                    data-translate="grade_9"></span></p>
-                            <p class="comp-line"><b data-translate="grade_champion"></b> <a
-                                    class="view-competition-certificate" href="/certs/comp/coder.pdf"
-                                    target="_blank"><img src="../img/certificate.svg"><span
-                                        data-translate="view"></span></a></p>
-                        </span>
-                    </div>-->
-
+                    <span class="test-score">67<span> /100</span></span>
                 </div>
+                <div class="test-subscores">
+                    <div class="test-subscore">
+                        <span class="sub-label" data-translate="oral"></span>
+                        <span class="sub-value">25 <span>/50</span></span>
+                    </div>
+                    <div class="test-subscore">
+                        <span class="sub-label" data-translate="written"></span>
+                        <span class="sub-value">42 <span>/50</span></span>
+                    </div>
+                </div>
+                <a class="test-cert-link" href="/certs/lang/dalf_c2.pdf" target="_blank"><i
+                        class="fa-solid fa-arrow-up-right-from-square"></i> <span
+                        data-translate="view_certificate"></span></a>
             </div>
 
-            <div class="competition-card">
-                <div class="competition-card-primary">
-                    <span class="competition-info">
-                        <h3><span data-translate="stem_comp"></span></h3>
-                    </span>
+            <div class="test-card">
+                <div class="test-card-header">
+                    <div>
+                        <h3>IELTS Academic</h3>
+                        <p class="test-date"><span data-translate="jun"></span> 2024 • CEFR C1</p>
+                    </div>
+                    <span class="test-score">8.0<span> /9</span></span>
                 </div>
-                <div class="competition-card-secondary">
-                    <div class="competition-group">
-                        <h4 class="competition-name">First Robotics Competition</h4>
-                        <span class="competition-item">
-                            <p class="comp-line"><span class="competition-year">2025</span> — Marmara Regional</p>
-                            <p class="comp-line"> <b>Finalist Award</b></p>
-                        </span>
+                <div class="test-subscores">
+                    <div class="test-subscore">
+                        <span class="sub-label" data-translate="listening"></span>
+                        <span class="sub-value">9.0 <span>/9</span></span>
                     </div>
-
-                    <div class="competition-group">
-                        <h4 class="competition-name" data-translate="cs"></h4>
-                        <span class="competition-item">
-                            <p class="comp-line"><span class="competition-year">2024</span> — <span
-                                    data-translate="grade_11"></span></p>
-                            <p class="comp-line"><b data-translate="silver"></b><a class="view-competition-certificate"
-                                    href="/certs/comp/concours_2024.pdf" target="_blank"><img
-                                        src="../img/certificate.svg"><span data-translate="view"></span></a></p>
-                        </span>
-                        <!--<span class="competition-item">
-                            <p class="comp-line"><span class="competition-year">2023</span> — <span
-                                    data-translate="grade_10"></span></p>
-                            <p class="comp-line"><span data-translate="participation"></span><a
-                                    class="view-competition-certificate" href="/certs/comp/concours_2023.pdf"
-                                    target="_blank"><img src="../img/certificate.svg"><span
-                                        data-translate="view"></span></a></p>
-                        </span>
-                        <span class="competition-item">
-                            <p class="comp-line"><span class="competition-year">2022</span> — <span
-                                    data-translate="grade_9"></span></p>
-                            <p class="comp-line"><span data-translate="participation"></span><a
-                                    class="view-competition-certificate" href="/certs/comp/concours_2022.pdf"
-                                    target="_blank"><img src="../img/certificate.svg"><span
-                                        data-translate="view"></span></a></p>
-                        </span>-->
+                    <div class="test-subscore">
+                        <span class="sub-label" data-translate="reading"></span>
+                        <span class="sub-value">8.5 <span>/9</span></span>
                     </div>
-
-                </div>
-            </div>
-
-            <div class="competition-card-filler"></div>
-            <div class="competition-card-filler"></div>
-
-        </div>
-
-        <hr>
-
-        <h2 class="section-title" data-target="languages-container">
-            <span class='chevron'>❯</span>
-            <span data-translate="languages"></span>
-        </h2>
-        <div class="cards-container" id="languages-container">
-            <div class="lang-card">
-                <img src="../img/tr.svg" alt="Türkiye">
-                <span class="lang-info">
-                    <h3 class="lang-name" data-translate="turkish"></h3>
-                    <h3 class="lang-level" data-translate="mother_tongue"></h3>
-                </span>
-            </div>
-
-            <div class="lang-card">
-                <img src="../img/de.svg" alt="Germany">
-                <span class="lang-info">
-                    <h3 class="lang-name" data-translate="german"></h3>
-                    <h3 class="lang-level" data-translate="father_tongue"></h3>
-                </span>
-            </div>
-
-            <div class="lang-card">
-                <img src="../img/fr.svg" alt="France">
-                <span class="lang-info">
-                    <h3 class="lang-name" data-translate="french"></h3>
-                    <h3 class="lang-level tooltip"><span data-translate="c2"></span><span class="tooltip-text">
-                            DALF C2 67/100</span></h3>
-                </span>
-            </div>
-
-            <div class="lang-card">
-                <img src="../img/gb.svg" alt="UK">
-                <span class="lang-info">
-                    <h3 class="lang-name" data-translate="english"></h3>
-                    <h3 class="lang-level tooltip"><span data-translate="c1"></span><span class="tooltip-text">
-                            IELTS 8.0</span></h3>
-                </span>
-            </div>
-
-            <div class="lang-card">
-                <img src="../img/latin.jpg" alt="Latin">
-                <span class="lang-info">
-                    <h3 class="lang-name" data-translate="latin"></h3>
-                    <h3 class="lang-level" data-translate="beginner"></h3>
-                </span>
-            </div>
-
-            <div class="lang-card">
-                <img src="../img/it.svg" alt="Italy">
-                <span class="lang-info">
-                    <h3 class="lang-name" data-translate="italian"></h3>
-                    <h3 class="lang-level" data-translate="learning"></h3>
-                </span>
-            </div>
-
-            <div class="lang-card-filler"></div>
-            <div class="lang-card-filler"></div>
-            <div class="lang-card-filler"></div>
-
-            <div class="lang-card-filler spacing-30"></div>
-        </div>
-
-        <!--<hr>
-
-        <h2 class="section-title" data-target="extracurriculars-container">
-            <span class='chevron'>❯</span>
-            <span data-translate="extracurriculars"></span>
-        </h2>
-        <div class="cards-container" id="extracurriculars-container">
-            <div class="cards-container-inner">
-                <div class="student-card">
-                    <div class="student-card-primary">
-                        <img src="../img/gunce.png" alt="İstanbul Günceleri Logo">
-                        <span class="student-info">
-                            <h3 data-translate="social_media"></h3>
-                            <p><span data-translate="aug"></span> 2023 - <span data-translate="sep"></span> 2025</p>
-                        </span>
-
+                    <div class="test-subscore">
+                        <span class="sub-label" data-translate="writing"></span>
+                        <span class="sub-value">7.0 <span>/9</span></span>
                     </div>
-                    <div class="student-card-secondary">
-                        <p class="student-desc" data-translate="gunce_desc">
-                        </p>
-                        <a class="view-certificate center-override" href="https://www.instagram.com/istanbulgunceleri"
-                            target="_blank"><img src="../img/link.svg" alt="">Instagram @istanbulgunceleri</a>
+                    <div class="test-subscore">
+                        <span class="sub-label" data-translate="speaking"></span>
+                        <span class="sub-value">8.0 <span>/9</span></span>
                     </div>
                 </div>
-
-                <div class="student-card">
-                    <div class="student-card-primary">
-                        <img src="../img/sj-modern.png" alt="Saint-Joseph Logo">
-                        <span class="student-info">
-                            <h3 data-translate="coding_team"></h3>
-                            <p><span data-translate="oct"></span> 2024 - <span data-translate="jun"></span> 2025</p>
-                        </span>
-
-                    </div>
-                    <div class="student-card-secondary">
-                        <p class="student-desc" data-translate="coding_desc">
-                        </p>
-                    </div>
-                </div>
-
-                <div class="student-card">
-                    <div class="student-card-primary">
-                        <img src="../img/sj-modern.png" alt="Saint-Joseph Logo">
-                        <span class="student-info">
-                            <h3 data-translate="innovation_team"></h3>
-                            <p><span data-translate="sep"></span> 2024 - <span data-translate="jun"></span> 2025</p>
-                        </span>
-
-                    </div>
-                    <div class="student-card-secondary">
-                        <p class="student-desc" data-translate="innovation_desc">
-                        </p>
-
-                    </div>
-                </div>
-                <div class="student-card">
-                    <div class="student-card-primary">
-                        <img src="../img/sj-modern.png" alt="Saint-Joseph Logo">
-                        <span class="student-info">
-                            <h3 data-translate="yillik_team"></h3>
-                            <p><span data-translate="sep"></span> 2024 - <span data-translate="jun"></span> 2025</p>
-                        </span>
-
-                    </div>
-                    <div class="student-card-secondary">
-                        <p class="student-desc" data-translate="yillik_desc">
-                        </p>
-
-                    </div>
-                </div>
-
-                <div class="student-card">
-                    <div class="student-card-primary">
-                        <img src="../img/mfinue.png" alt="MFINUE 2024 Logo">
-                        <span class="student-info">
-                            <h3 data-translate="it_team"></h3>
-                            <p><span data-translate="may"></span> 2024 - <span data-translate="dec"></span> 2024</p>
-                        </span>
-
-                    </div>
-                    <div class="student-card-secondary">
-                        <p class="student-desc" data-translate="mfinue_desc">
-                        </p>
-                        <span class="horizontal-links">
-                            <a class="view-certificate center-override" href="https://mfinue.org" target="_blank"><img
-                                    src="../img/link.svg" alt="">mfinue.org</a>
-                            <a class="view-certificate center-override" href="https://connect.mfinue.org"
-                                target="_blank"><img src="../img/link.svg" alt="">MFINUE Connect</a>
-                        </span>
-
-                    </div>
-                </div>
-
-                <div class="student-card-filler"></div>
-                <div class="student-card-filler"></div>
-
+                <a class="test-cert-link" href="/certs/lang/ielts.pdf" target="_blank"><i
+                        class="fa-solid fa-arrow-up-right-from-square"></i> <span
+                        data-translate="view_certificate"></span></a>
             </div>
         </div>-->
 
-        <hr>
+            <!-- ===== CONTACT ===== -->
+            <section class="contact-section" id="contact-section">
+                <h2 class="section-title">
+                    <span class="emoji">💬</span>
+                    <span data-translate="contact_title"></span>
+                </h2>
+                <div class="contact-links">
+                    <div class="contact-card" id="email-card" data-email="deniz.honigs@epfl.ch">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>deniz.honigs@epfl.ch</span>
+                    </div>
+                    <a class="contact-card" href="https://github.com/densdevv" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a class="contact-card" href="https://www.linkedin.com/in/deniz-h%C3%B6nigs-213261273/"
+                        target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </section>
 
-        <!--<h2 class="section-title" data-target="grades-container">
-            <span class='chevron'>❯</span>
-            <span data-translate="grades"></span>
-        </h2>
-        <div class="cards-container" id="grades-container">
-            <div class="test-card">
-                <div class="test-card-primary">
-                    <span class="test-info">
-                        <h3 data-translate="gpa"></h3>
-                        <p data-translate="gpa_desc"></p>
-                    </span>
-                    <span class="test-score">
-                        98.86<span> /100</span>
-                    </span>
-                </div>
-                <div class="test-card-secondary">
-                    <span class="placements">
-                        <span class="placement-second placement-disclaimer">🥈 <span
-                                data-translate="second_place"></span></span>
-                    </span>
-                </div>
+            <!-- Footer -->
+            <div class="footer">
+                <b>CV v3</b> 26w33a | <b>© 2026</b><br>
+                <span data-translate="created_by"></span>
             </div>
-            <div class="test-card">
-                <div class="test-card-primary">
-                    <span class="test-info">
-                        <h3 data-translate="grade_12"></h3>
-                        <p>2024-2025</p>
-                    </span>
-                    <span class="test-score">
-                        99.58<span> /100</span>
-                    </span>
-                </div>
-                <div class="test-card-secondary">
-                    <span class="placements">
-                        <span class="placement-first placement-class" data-translate="class_1st"></span>
-                        <span class="placement-first placement-grade" data-translate="grade_1st"></span>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="first_term"></p>
-                        <p><b>99.45 </b>/100</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="second_term"></p>
-                        <p><b>99.71</b> /100</p>
-                    </span>
-                </div>
-            </div>
-            <div class="test-card">
-                <div class="test-card-primary">
-                    <span class="test-info">
-                        <h3 data-translate="grade_11"></h3>
-                        <p>2023-2024</p>
-                    </span>
-                    <span class="test-score">
-                        98.91<span> /100</span>
-                    </span>
-                </div>
-                <div class="test-card-secondary">
-                    <span class="placements">
-                        <span class="placement-first placement-class" data-translate="class_1st"></span>
-                        <span class="placement-first placement-grade" data-translate="grade_1st"></span>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="first_term"></p>
-                        <p><b>98.83</b> /100</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="second_term"></p>
-                        <p><b>98.99</b> /100</p>
-                    </span>
-                </div>
-            </div>
-            <div class="test-card">
-                <div class="test-card-primary">
-                    <span class="test-info">
-                        <h3 data-translate="grade_10"></h3>
-                        <p>2022-2023</p>
-                    </span>
-                    <span class="test-score">
-                        98.65<span> /100</span>
-                    </span>
-                </div>
-                <div class="test-card-secondary">
-                    <span class="placements">
-                        <span class="placement-first placement-class" data-translate="class_1st"></span>
-                        <span class="placement-third placement-grade" data-translate="grade_3rd"></span>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="first_term"></p>
-                        <p><b>98.91</b> /100</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="second_term"></p>
-                        <p><b>98.39</b> /100</p>
-                    </span>
-                    <a class="view-certificate" href="/certs/edu/honor_2023.pdf" target="_blank"><img
-                            src="../img/certificate.svg"><span data-translate="honor_certificate"></span></a>
-                </div>
-            </div>
-            <div class="test-card">
-                <div class="test-card-primary">
-                    <span class="test-info">
-                        <h3 data-translate="grade_9"></h3>
-                        <p>2021-2022</p>
-                    </span>
-                    <span class="test-score">
-                        98.28<span> /100</span>
-                    </span>
-                </div>
-                <div class="test-card-secondary">
-                    <span class="placements">
-                        <span class="placement-first placement-class" data-translate="class_1st"></span>
-                        <span class="placement-other placement-grade" data-translate="grade_top10"></span>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="first_term"></p>
-                        <p><b>97.94</b> /100</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="second_term"></p>
-                        <p><b>98.63</b> /100</p>
-                    </span>
-                    <a class="view-certificate" href="/certs/edu/honor_2022.pdf" target="_blank"><img
-                            src="../img/certificate.svg"><span data-translate="honor_certificate"></span></a>
-                </div>
-            </div>
-            <div class="test-card">
-                <div class="test-card-primary">
-                    <span class="test-info">
-                        <h3 data-translate="grade_prep"></h3>
-                        <p>2020-2021</p>
-                    </span>
-                    <span class="test-score">
-                        97.06<span> /100</span>
-                    </span>
-                </div>
-                <div class="test-card-secondary">
-                    <span class="placements">
-                        <span class="placement-third placement-class" data-translate="class_3rd"></span>
-                        <span class="placement-other placement-grade" data-translate="grade_top10"></span>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="first_term"></p>
-                        <p><b>97.06</b> /100</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="second_term"></p>
-                        <p><b class="tooltip">N/A <span class="tooltip-text"
-                                    data-translate="covid_disclaimer"></span></b>
-                        </p>
-                    </span>
-                </div>
-            </div>
-            <div class="test-card-filler"></div>
-            <div class="test-card-filler"></div>
-        </div>
 
-        <hr>-->
+        </div> <!-- /.main-sections -->
 
-        <h2 class="section-title" data-target="tests-container">
-            <span class='chevron'>❯</span>
-            <span data-translate="test_results"></span>
-        </h2>
-        <div class="cards-container" id="tests-container">
-            <div class="test-card">
-                <div class="test-card-primary">
-                    <span class="test-info">
-                        <h3 data-translate="gpa"></h3>
-                        <p data-translate="gpa_desc"></p>
-                    </span>
-                    <span class="test-score">
-                        98.86<span> /100</span>
-                    </span>
-                </div>
-                <div class="test-card-secondary">
-                    <span class="placements">
-                        <span class="placement-second placement-disclaimer">🥈 <span
-                                data-translate="second_place"></span></span>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="grade_9"></p>
-                        <p><b>98.28</b> /100</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="grade_10"></p>
-                        <p><b>98.65</b> /100</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="grade_11"></p>
-                        <p><b>98.91</b> /100</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="grade_12"></p>
-                        <p><b>99.58</b> /100</p>
-                    </span>
-
-                </div>
-            </div>
-            <div class="test-card">
-                <div class="test-card-primary">
-                    <span class="test-info">
-                        <h3>DALF C2</h3>
-                        <p><span data-translate="jun"></span> 2024</p>
-                    </span>
-                    <span class="test-score">
-                        67<span> /100</span>
-                    </span>
-                </div>
-                <div class="test-card-secondary">
-                    <span class="test-subscore">
-                        <p data-translate="oral">
-                        <p>
-                        <p><b>25</b> /50</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="written"></p>
-                        <p><b>42</b> /50</p>
-                    </span>
-                    <a class="view-certificate" href="/certs/lang/dalf_c2.pdf" target="_blank"><img
-                            src="../img/certificate.svg"><span data-translate="view_certificate"></span></a>
-                </div>
-            </div>
-            <!--<div class="test-card">
-                <div class="test-card-primary">
-                    <span class="test-info">
-                        <h3>DALF C1</h3>
-                        <p><span data-translate="jun"></span> 2024</p>
-                    </span>
-                    <span class="test-score">
-                        53.5<span> /100</span>
-                    </span>
-                </div>
-                <div class="test-card-secondary">
-                    <span class="test-subscore">
-                        <p data-translate="listening"></p>
-                        <p><b>15</b> /25</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="reading"></p>
-                        <p><b>14</b> /25</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="writing"></p>
-                        <p><b>11.5</b> /25</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="speaking"></p>
-                        <p><b>13</b> /25</p>
-                    </span>
-                    <a class="view-certificate" href="/certs/lang/dalf_c1.pdf" target="_blank"><img
-                            src="../img/certificate.svg"><span data-translate="view_certificate"></span></a>
-                </div>
-            </div>-->
-            <div class="test-card">
-                <div class="test-card-primary">
-                    <span class="test-info">
-                        <h3>IELTS Academic</h3>
-                        <p><span data-translate="jun"></span> 2024 • <b>CEFR C1</b></p>
-                    </span>
-                    <span class="test-score">
-                        8.0<span> /9</span>
-                    </span>
-                </div>
-                <div class="test-card-secondary">
-                    <span class="test-subscore">
-                        <p data-translate="listening"></p>
-                        <p><b>9.0</b> /9</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="reading"></p>
-                        <p><b>8.5</b> /9</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="writing"></p>
-                        <p><b>7.0</b> /9</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="speaking"></p>
-                        <p><b>8.0</b> /9</p>
-                    </span>
-                    <a class="view-certificate" href="/certs/lang/ielts.pdf" target="_blank"><img
-                            src="../img/certificate.svg"><span data-translate="view_certificate"></span></a>
-                </div>
-            </div>
-            <!--<div class="test-card">
-                <div class="test-card-primary">
-                    <span class="test-info">
-                        <h3>SAT</h3>
-                        <p><span data-translate="may"></span> 2024</p>
-                    </span>
-                    <span class="test-score">
-                        1490<span> /1600</span>
-                    </span>
-                </div>
-                <div class="test-card-secondary">
-                    <span class="test-subscore">
-                        <p data-translate="maths"></p>
-                        <p><b>790</b> /800</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="english"></p>
-                        <p><b>700</b> /800</p>
-                    </span>
-                    <a class="view-certificate" href="/certs/edu/sat.pdf" target="_blank"><img
-                            src="../img/certificate.svg"><span data-translate="view_certificate"></span></a>
-                </div>
-            </div>-->
-            <!--<div class="test-card">
-                <div class="test-card-primary">
-                    <span class="test-info">
-                        <h3>DELF B2</h3>
-                        <p><span data-translate="feb"></span> 2024</p>
-                    </span>
-                    <span class="test-score">
-                        93<span> /100</span>
-                    </span>
-                </div>
-                <div class="test-card-secondary">
-                    <span class="test-subscore">
-                        <p data-translate="listening"></p>
-                        <p><b>22.5</b> /25</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="reading"></p>
-                        <p><b>23.5</b> /25</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="writing"></p>
-                        <p><b>22</b> /25</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="speaking"></p>
-                        <p><b>25</b> /25</p>
-                    </span>
-                    <a class="view-certificate" href="/certs/lang/delf_b2.pdf" target="_blank"><img
-                            src="../img/certificate.svg"><span data-translate="view_certificate"></span></a>
-                </div>
-            </div>
-            <div class="test-card">
-                <div class="test-card-primary">
-                    <span class="test-info">
-                        <h3>Cambridge FCE</h3>
-                        <p><span data-translate="jun"></span> 2021 • <b>CEFR C1</b></p>
-                    </span>
-                    <span class="test-score">
-                        182<span> /190</span>
-                    </span>
-                </div>
-                <div class="test-card-secondary">
-                    <span class="test-subscore">
-                        <p data-translate="reading"></p>
-                        <p><b>178</b> /190</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="use_of_english"></p>
-                        <p><b>187</b> /190</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="writing"></p>
-                        <p><b>175</b> /190</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="listening"></p>
-                        <p><b>182</b> /190</p>
-                    </span>
-                    <span class="test-subscore">
-                        <p data-translate="speaking"></p>
-                        <p><b>186</b> /190</p>
-                    </span>
-                    <a class="view-certificate" href="/certs/lang/fce.pdf" target="_blank"><img
-                            src="../img/certificate.svg"><span data-translate="view_certificate"></span></a>
-                </div>
-            </div>-->
-            <div class="test-card-filler"></div>
-            <div class="test-card-filler"></div>
-        </div>
     </div>
-    <div class="footer"><b>CV v2</b> 26w18a | <b>© 2026</b><br>
-        <span data-translate="created_by"></span>
-    </div>
+
+    <script src="main.js"></script>
 </body>
-<script src="main.js"></script>
 
-```
+</html>
