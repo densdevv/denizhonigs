@@ -9,9 +9,9 @@ const T = {
     bio_name: { en: "<span>Deniz Hönigs</span>", tr: "<span>Deniz Hönigs</span>", fr: "<span>Deniz Hönigs</span>" },
     bio_title: { en: "Computer Science Student at EPFL", tr: "EPFL Bilgisayar Mühendisliği Öğrencisi", fr: "Étudiant en informatique à l'EPFL" },
     bio_text: {
-        en: "<b>Hello there! </b> I am a wannabe software engineer from Istanbul 🇹🇷, currently living in Lausanne 🇨🇭. Apart from my studies at EPFL, I try to create little side quest projects here and there.",
-        tr: "<b>Selam! </b>Ben İstanbul 🇹🇷 'dan gelen, şu sıralar Lozan 🇨🇭'de yaşayan, bir bilgisayar mühendisi adayıyım. EPFL'deki eğitimimin yanı sıra, kendi çapımda ufak side-quest projeler üretiyorum.",
-        fr: "<b>Salut! </b>Je suis un informaticien en herbe d'Istanbul 🇹🇷, actuellement en train de vivre à Lausanne 🇨🇭. En dehors de mes études à l'EPFL, j'essaie de créer de petits projets side-quest ici et là."
+        en: "<b>Hello there! </b> I am a wannabe computer scientist from Istanbul 🇹🇷, currently living in Lausanne 🇨🇭. Apart from my studies at EPFL, I try to create little side quest projects here and there.",
+        tr: "<b>Selam! </b>Ben İstanbul 🇹🇷 'dan gelen ve Lozan 🇨🇭'da yaşayan, bir bilgisayar mühendisi adayıyım. EPFL'deki eğitimimin yanı sıra, kendi çapımda ufak side-quest projeler üretiyorum.",
+        fr: "<b>Salut! </b>Je suis un futur informaticien d'origine Istanbul 🇹🇷, actuellement à Lausanne 🇨🇭. En dehors de mes études à l'EPFL, j'essaie de créer de petits projets side-quest ici et là."
     },
 
     // ── Section Titles ──
@@ -52,7 +52,7 @@ const T = {
     // ── Experience Roles ──
     intern: { en: "Intern", tr: "Stajyer", fr: "Stagiaire" },
     cofounder: { en: "Co-founder", tr: "Kurucu Ortak", fr: "Co-fondateur" },
-    frc_mentor: { en: "Conscius Robotics - FRC Team Mentor", tr: "Conscius Robotics - FRC Takım Mentoru", fr: "Conscius Robotics - Mentor d'équipe FRC" },
+    frc_mentor: { en: "FRC Team Mentor", tr: "FRC Takım Mentoru", fr: "Mentor d'équipe FRC" },
     committee_member: { en: "Committee Member", tr: "Komite Üyesi", fr: "Membre du comité" },
     gamedev: { en: "Game Developer", tr: "Oyun Geliştirici", fr: "Développeur de jeux" },
     project_manager: { en: "Project Manager", tr: "Proje Yöneticisi", fr: "Chef des projets" },
@@ -200,6 +200,11 @@ const T = {
 
     // ── Footer ──
     created_by: { en: "Designed & developed with 🩵 by Deniz Hönigs, with the help of Claude, duh.", tr: "Deniz Hönigs tarafından 🩵 ile tasarlandı ve geliştirildi, Claude'un yardımıyla elbette.", fr: "Conçu et développé avec 🩵 par Deniz Hönigs, avec l'aide de Claude, évidemment." },
+    footer_footnote: {
+        en: "I swear the accent color blurs, frosted glass and emdashes are my idea.",
+        tr: "Parlayan renkler, buzlu cam efekti ve uzun tireler benim fikrimdi, yeminle.",
+        fr: "Je jure que les flous de couleur, l'effet verre dépoli et les tirets cadratins étaient mon idée."
+    },
 };
 
 // Build per-language lookup from key-first structure
@@ -310,8 +315,8 @@ const revealObserver = new IntersectionObserver((entries) => {
 revealElements.forEach(el => revealObserver.observe(el));
 
 // ===== INTRO SEQUENCE & SCROLL UNLOCK =====
-const INTRO_EXPAND_MS = 1350;
-const INTRO_DURATION_MS = 2900;
+const INTRO_EXPAND_MS = 600;
+const INTRO_DURATION_MS = 1200;
 
 setTimeout(() => {
     const bioCard = document.getElementById('bio-card');
@@ -333,7 +338,7 @@ function unlockPageContent() {
             setTimeout(() => {
                 el.classList.add('visible');
                 revealObserver.unobserve(el);
-            }, i * 80);
+            }, i * 40);
         }
     });
 }

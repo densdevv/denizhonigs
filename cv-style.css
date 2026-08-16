@@ -59,7 +59,7 @@ body.scroll-locked {
 .main-sections {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .main-sections.intro-locked {
@@ -69,7 +69,7 @@ body.scroll-locked {
     visibility: hidden !important;
 }
 
-/* Subtle grid/noise background */
+/* Ambient rich blue/blurple background glow spots for frosted glass */
 body::before {
     content: '';
     position: fixed;
@@ -78,8 +78,25 @@ body::before {
     width: 100%;
     height: 100%;
     background:
-        radial-gradient(ellipse at 20% 0%, rgba(122, 162, 247, 0.08) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 100%, rgba(122, 162, 247, 0.04) 0%, transparent 50%);
+        radial-gradient(circle 700px at 15% 15%, rgba(99, 102, 241, 0.22) 0%, rgba(99, 102, 241, 0.04) 55%, transparent 75%),
+        radial-gradient(circle 650px at 85% 20%, rgba(122, 162, 247, 0.22) 0%, rgba(59, 130, 246, 0.05) 50%, transparent 75%),
+        radial-gradient(circle 800px at 10% 60%, rgba(67, 56, 202, 0.20) 0%, rgba(99, 102, 241, 0.05) 50%, transparent 75%),
+        radial-gradient(circle 700px at 88% 75%, rgba(129, 140, 248, 0.20) 0%, rgba(122, 162, 247, 0.04) 50%, transparent 80%),
+        radial-gradient(circle 600px at 50% 95%, rgba(59, 130, 246, 0.18) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(ellipse 90% 60% at 50% -10%, rgba(122, 162, 247, 0.14) 0%, transparent 60%),
+        radial-gradient(circle 500px at 50% 45%, rgba(99, 102, 241, 0.10) 0%, transparent 70%);
     pointer-events: none;
     z-index: 0;
 }
@@ -243,10 +260,10 @@ a:hover {
     transform: translateY(20px);
     width: fit-content;
     max-width: max-content;
-    animation: bioCardIntro 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
-    transition: width 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-        max-width 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-        padding 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: bioCardIntro 0.35s cubic-bezier(0.16, 1, 0.3, 1) 0.05s forwards;
+    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        padding 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .bio-card.bio-expanded {
@@ -268,7 +285,7 @@ a:hover {
     justify-content: space-between;
     gap: 24px;
     margin-bottom: 0;
-    transition: margin-bottom 0.5s ease;
+    transition: margin-bottom 0.35s ease;
 }
 
 .bio-card.bio-expanded .bio-header {
@@ -286,7 +303,7 @@ a:hover {
     margin: 0;
     opacity: 1;
     white-space: nowrap;
-    animation: greetingFadeOut 0.45s cubic-bezier(0.4, 0, 0.2, 1) 1.3s forwards;
+    animation: greetingFadeOut 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.55s forwards;
     overflow: hidden;
 }
 
@@ -368,7 +385,7 @@ a:hover {
     letter-spacing: -0.04em;
     line-height: 1.1;
     margin-bottom: 4px;
-    animation: bioItemFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+    animation: bioItemFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) 0.05s forwards;
 }
 
 .bio-card.bio-expanded .bio-name span {
@@ -384,7 +401,7 @@ a:hover {
     color: var(--text-secondary);
     font-weight: 400;
     margin-bottom: 16px;
-    animation: bioItemFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
+    animation: bioItemFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) 0.12s forwards;
 }
 
 .bio-card.bio-expanded .bio-text {
@@ -394,14 +411,14 @@ a:hover {
     line-height: 1.7;
     margin-bottom: 24px;
     max-width: 600px;
-    animation: bioItemFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.55s forwards;
+    animation: bioItemFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) 0.20s forwards;
 }
 
 .bio-card.bio-expanded .bio-languages {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    animation: bioItemFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.75s forwards;
+    animation: bioItemFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) 0.28s forwards;
 }
 
 @keyframes bioItemFadeIn {
@@ -447,26 +464,18 @@ a:hover {
     font-size: 12px;
 }
 
-/* ===== TIMELINE ===== */
+/* ===== TIMELINE / EXPERIENCE & EDUCATION LIST ===== */
 .timeline {
     position: relative;
-    padding-left: 40px;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 15px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, var(--accent), var(--accent-dim), transparent);
-    border-radius: 1px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 24px;
+    margin-bottom: 0;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -475,38 +484,6 @@ a:hover {
 .timeline-item.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -32px;
-    top: 20px;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: var(--accent);
-    border: 5px solid var(--bg-primary);
-    z-index: 2;
-    box-shadow: 0 0 0 2px var(--accent-dim);
-}
-
-.timeline-item.current::before {
-    background: var(--accent-bright);
-    box-shadow: 0 0 0 2px var(--accent-dim);
-    animation: radiate 2s ease-in-out infinite;
-}
-
-@keyframes radiate {
-
-    0%,
-    100% {
-        box-shadow: 0 0 0 2px var(--accent-dim);
-    }
-
-    50% {
-        box-shadow: 0 0 0 2px var(--accent-dim);
-    }
 }
 
 .timeline-card {
@@ -1147,6 +1124,15 @@ a:hover {
     color: var(--text-secondary);
 }
 
+.footer-footnote {
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--text-muted);
+    opacity: 0.65;
+    font-style: italic;
+    letter-spacing: 0.01em;
+}
+
 /* ===== ANIMATIONS ===== */
 @keyframes fadeUp {
     to {
@@ -1212,17 +1198,6 @@ a:hover {
     .section-title {
         font-size: 22px;
         margin: 48px 0 24px;
-    }
-
-    .timeline {
-        padding-left: 32px;
-    }
-
-    .timeline-item::before {
-        left: -26px;
-        width: 14px;
-        height: 14px;
-        border-width: 4px;
     }
 
     .timeline-card {
